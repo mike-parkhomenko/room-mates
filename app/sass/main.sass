@@ -1864,7 +1864,7 @@ footer
 /////////////// User Room //////////////////////////////////
 
 // Header Section
-.user-room, .looking-apartment
+.user-room, .looking-apartment, .looking-room
 	width: 100%
 	.section-header
 		width: 100%
@@ -1879,12 +1879,12 @@ footer
 				width: 100%
 				height: 100%
 
-.user-room, .looking-apartment
+.user-room, .looking-apartment, .looking-room
 	.section-room
 		padding-bottom: 60px
 
 // Aside User Room
-.user-room, .looking-apartment
+.user-room, .looking-apartment, .looking-room
 	.profile
 		background-color: #fff
 		position: relative
@@ -2036,7 +2036,7 @@ footer
 				top: 0
 
 // Content
-.user-room, .looking-apartment
+.user-room, .looking-apartment, .looking-room
 	.content
 		position: relative
 		top: -40px
@@ -2114,7 +2114,6 @@ footer
 					padding: 0
 					margin-top: 18px
 					.text
-						max-width: 140px
 						margin: 0 auto
 						font-family: "ProximaBold", $helvetica
 						font-size: em(18px)
@@ -2159,7 +2158,7 @@ footer
 				height: 100%
 
 // USER ROOM STEP 2
-.user-room, .looking-apartment
+.user-room, .looking-apartment, .looking-room
 	.step-2, .content
 		.form-step-2, .form-step
 			width: 100%
@@ -2789,7 +2788,7 @@ footer
 ////////////////////////////
 
 // Main Form
-.looking-apartment
+.looking-apartment, .looking-room
 	.content
 		.form-step
 			border-bottom: 3px solid rgba(0, 0, 0, 0.2)
@@ -2890,6 +2889,27 @@ footer
 			.btn-standart
 				display: inline-block
 				width: auto
+
+//////////////////////////////
+/////////////////////////////
+//
+// Looking Room
+//
+////////////////////////////
+
+// Looking Room Step-1
+.looking-room
+	.content
+		.btn-wrap
+			text-align: right
+		&.step-1
+		.form-step
+			.form-part
+				padding-bottom: 65px
+
+// Looking Room Step-2
+.looking-room
+	.step-2
 
 
 
