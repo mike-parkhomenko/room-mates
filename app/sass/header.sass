@@ -1,0 +1,230 @@
+@import "bourbon"
+@import "vars"
+@import "base"
+
+//First screen styles
+.preloader
+	width: 100%
+	height: 100vh
+	position: fixed
+	z-index: 1000
+	background-color: #fff
+	img
+		left: 50%
+		position: absolute
+		top: 50%
+		transform: translate(-50%,-50%)
+
+header
+	width: 100%
+	background-size: cover
+	position: absolute
+	padding-top: 40px
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		background-color: rgba(85,65,62,.25)
+	.top-line
+		position: relative
+		width: 100%
+		line-height: 85px
+		height: 85px
+		background-color: rgba(85,65,62,.45)
+		z-index: 998
+		transition: all .3s $animate
+		&.fixed
+			position: fixed
+			top: 0
+			height: 60px
+			line-height: 60px
+			transition: height .3s $animate
+			transition-delay: .3s
+			background-color: rgba(85,65,62,.95)
+			box-shadow: 0px 0px 20px 0px rgba(0,0,0,.7)
+			.main-mnu
+				ul
+					li
+						&.avatar
+							a
+								img
+									width: 40px
+									transition: all .1s $animate
+		.logo-wrap
+			img
+				width: 90px
+		.main-mnu
+			float: right
+			ul
+				li
+					transition: all .3s
+					cursor: pointer
+					&.logged-in
+						a
+							color: #ebd2b5
+					&.avatar
+						&:hover
+							box-shadow: none
+							background-color: rgba(85,65,62,0)
+						a
+							display: inline-block
+							border-radius: 50%
+							position: relative
+							height: 100%
+							img, .icon
+								border-radius: 50%
+								border: 2px solid #fff
+							img
+								width: 60px
+								transition: all .1s $animate
+							.icon
+								display: inline-block
+								position: absolute
+								width: 18px
+								height: 18px
+								max-height: 18px
+								line-height: 17px
+								bottom: 10px
+								right: 0
+								background-color: $green-color
+								font-family: "ProximaBold", $helvetica
+								font-size: em(10px)
+								text-align: center
+								vertical-align: middle
+					a
+						display: block
+						width: 100%
+						height: 100%
+						font-family: "ProximaBold", $helvetica
+						font-size: em(20px)
+						color: #fff
+						transition: all .3s
+						padding: 0px 15px
+						span
+							color: #fff
+					&.active-page
+						background-color: rgba(85,65,62,.47)
+						transition: all .3s
+						box-shadow: inset 0px 7px 0px 0px $green-color
+						a
+							color: $green-color
+							transition: all .3s
+							span
+								color: #fff
+					&:hover
+						background-color: rgba(85,65,62,.47)
+						transition: all .3s
+						box-shadow: inset 0px 7px 0px 0px $green-color
+						a
+							color: $green-color
+							transition: all .3s
+							span
+								color: #fff
+				li:last-of-type
+					&:hover
+						background-color: rgba(85,65,62,0)
+						box-shadow: none
+						a
+							color: #fff
+					a
+						padding: 0
+						display: inline
+						&:hover
+							color: $green-color
+
+header
+	.burger-wrap
+		width: 32px
+		height: 40px
+		background-color: transparent
+		position: absolute
+		right: 20px
+		top: 73px
+		&.fixed
+			position: fixed
+			top: 20px
+		span
+			display: block
+			width: 100%
+			height: 3px
+			background-color: #fff
+			position: relative
+			border-radius: 20px
+			&::before, &::after
+				content: ''
+				position: absolute
+				width: 100%
+				height: 3px
+				background-color: #fff
+				border-radius: 20px
+			&::before
+				top: 10px
+			&::after
+				top: 20px
+
+header
+	.vert-mnu
+		position: fixed
+		top: 0
+		right: -310px
+		width: 300px
+		height: 100%
+		background-color: #fff
+		z-index: 999
+		transition: all .3s
+		box-shadow: 0px 0px 20px 0px rgba(0,0,0,.5)
+		&.active
+			right: 0
+			transition: all .3s
+		.btn-close
+			width: 28px
+			height: 28px
+			position: absolute
+			top: 3px
+			left: 5px
+			&::before, &::after
+				content: ''
+				position: absolute
+				width: 100%
+				height: 3px
+				background-color: $text-color
+				top: 50%
+			&::before
+				transform: rotate(45deg)
+			&::after
+				transform: rotate(135deg)
+		.language-wrap
+			position: absolute
+			top: 5px
+			right: 10px
+			li
+				a
+					color: #000
+					font-family: "ProximaBold", $helvetica
+					font-size: em(18px)
+		.vert-main-mnu
+			margin-top: 80px
+			ul
+				li
+					display: block
+					width: 100%
+					text-align: center
+					padding: 5px 0px
+					background-color: $green-color
+					border-bottom: 1px solid rgba(255,255,255,.5)
+					a
+						font-family: "ProximaBold", $helvetica
+						font-size: em(20px)
+						color: #fff
+
+
+
+
+
+
+
+
+

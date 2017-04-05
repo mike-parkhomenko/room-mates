@@ -1,0 +1,6 @@
+Версии:
+
+- flatpickr v2.3.7: https://github.com/chmln/flatpickr
+- jQuery v2.2.1: https://code.jquery.com/jquery/
+- Owl Carousel v2.2.0: https://owlcarousel2.github.io/OwlCarousel2/docs/started-welcome.html
+- Waypoints - v4.0.0: http://imakewebthings.com/waypoints/

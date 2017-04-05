@@ -1,0 +1,2918 @@
+@import "bourbon"
+@import "vars"
+
+//Custom styles here
+
+// Main Screen
+.main-screen
+	position: relative
+	width: 100%
+	height: 100vh
+	top: 0
+	left: 0
+	.header-bg-images
+		position: absolute
+		height: 100%
+		width: 100%
+		top: 0
+		left: 0
+		.bg-img
+			height: 100vh
+			width: 100%
+			overflow: hidden
+			background-repeat: no-repeat
+			background-size: cover
+			.text-wrap
+				position: absolute
+				top: 30%
+				left: 40px
+				padding-right: 40px
+				overflow: hidden
+				.text
+					font-family: "ProximaLight", $helvetica
+					font-size: em(24px)
+					color: #fff
+					transition: all .3s $animate
+					transform: translateY(110%)
+					cursor: default
+		.bg-img:hover
+			&::before
+				transition: all .5s $animate
+				background-color: rgba(85,65,62,.47)
+			.text-wrap
+				.text
+					transition: all .3s $animate
+					transform: translateY(0%)
+
+.main-screen
+	.header-search
+		position: absolute
+		line-height: 90px
+		background-color: #fff
+		left: 50%
+		top: 50%
+		transform: translate(-50%,-50%)
+		width: 1130px
+		z-index: 1
+		.search-wrap
+			display: inline-block
+			padding: 0px 35px
+			padding-right: 10px
+			.search-parametr, .btn-wrap
+				display: inline-block
+				.title-wrap, .user-choice
+					display: inline-block
+				.title-wrap
+					.title
+						font-family: "ProximaBold", $helvetica
+						font-size: em(26px)
+						color: $lightgray
+						cursor: default
+						user-select: none
+				.user-choice
+					margin-left: 20px
+					cursor: pointer
+					line-height: 95px
+					user-select: none
+					.user-looking
+						width: 430px
+						margin-right: 10px
+					.choice-title, .flat-date
+						font-family: "ProximaBold", $helvetica
+						font-size: em(26px)
+						color: $search-choice-color
+						border: none
+					.form-control
+						display: inline-block
+						max-width: 140px
+						text-align: center
+						height: 100%
+						cursor: pointer
+						padding: 0
+						box-shadow: none
+						font-size: em(22px)
+						color: #585858
+						font-family: "ProximaBold", $helvetica
+						background-color: #fff
+						&::placeholder
+							font-size: em(20px)
+							color: #585858
+					.arrow-down
+						display: inline-block
+						position: relative
+						top: -4px
+						width: 13px
+						height: 13px
+						margin-right: 15px
+						transform: rotate(45deg)
+						border: 2px solid $search-choice-color
+						border-top-color: transparent
+						border-left-color: transparent
+					.select-wrap
+						display: none
+						position: absolute
+						top: 95px
+						margin-left: 17px
+						line-height: 1
+						background-color: #fff
+						.select
+							font-family: "ProximaNova", $helvetica
+							font-size: em(20px)
+							color: $lightgray
+							padding: 15px 20px
+							cursor: pointer
+							transition: all .3s $animate
+							display: block
+							&:hover
+								transition: all .3s $animate
+								color: $green-color
+								background-color: #f2f2f2
+							label
+								cursor: pointer
+								margin-bottom: 0
+					.date-wrap
+						display: none
+						position: absolute
+						top: 93px
+						background-color: #fff
+						right: 139px
+					
+		.btn-wrap
+			padding: 0
+			float: right
+			display: inline-block
+			position: relative
+			line-height: 97px
+			.btn-standart
+				display: block
+				padding: 0px 30px
+				font-size: em(20px)
+		
+.section-post
+	width: 100%
+	padding-top: 60px
+	padding-bottom: 150px
+	background-color: #fff
+	text-align: center
+	overflow: hidden
+	.text-wrap
+		margin-bottom: 50px
+		h2
+			font-family: "ProximaBold", $helvetica
+			font-size: em(32px)
+			color: $title-color
+			margin-bottom: 25px
+		p
+			font-family: "ProximaNova", $helvetica
+			font-size: em(24px)
+			color: $dark-text-color
+			line-height: 30px
+			span
+				font-weight: bold
+	.btn-wrap
+		.btn-standart
+			text-transform: none
+			font-size: em(24px)
+			padding: 0px 40px
+			line-height: 66px
+
+.section-apartments, .section-rooms
+	width: 100%
+	background-color: #fff
+	padding-bottom: 90px
+	overflow: hidden
+	h3
+		font-family: "ProximaBold", $helvetica
+		font-size: em(36px)
+		text-transform: uppercase
+		text-align: center
+		color: $burgundy-color
+		margin-bottom: 60px
+	.img-wrap
+		text-align: center
+		width: 100%
+		img
+			width: 100%
+	.title-wrap
+		margin-top: 18px
+		margin-bottom: 20px
+		p
+			font-family: "ProximaBold", $helvetica
+			font-size: em(26px)
+			text-align: center
+			color: $title-color
+	.info-wrap
+		li
+			display: block
+			margin-bottom: 5px
+			p
+				font-family: "ProximaNova", $helvetica
+				font-size: em(16px)
+				color: $title-color
+				display: inline-block
+				line-height: 18px
+				span
+					font-family: "ProximaBold", $helvetica
+				.view-details
+					color: $orange-color
+					text-align: right
+					margin-left: 30px
+					cursor: pointer
+		li
+			.icon-wrap
+				width: 30px
+				height: 31px
+				display: inline-block
+				margin-right: 15px
+				position: relative
+				background-repeat: no-repeat
+		li:first-child
+			.icon-wrap
+				left: 6px
+				background-image: url("../img/sprite/sprite.png")
+				background-position: 0px -57px
+		li:nth-child(2)
+			.icon-wrap
+				top: 2px
+				height: 20px
+				background-image: url("../img/sprite/sprite.png")
+				background-position: 0px -30px
+		li:last-child
+			.icon-wrap
+				height: 26px
+				top: 5px
+				background-image: url("../img/sprite/sprite.png")
+				background-position: 0px -130px
+	.btn-wrap
+		width: 100%
+		display: inline-block
+		text-align: center
+		margin-top: 55px
+		.btn-ghost
+			padding: 0px 40px
+			line-height: 54px
+
+.section-rooms
+	padding-top: 70px
+
+
+.section-roommates
+	width: 100%
+	padding-top: 65px
+	padding-bottom: 60px
+	background-image: url(../img/roommates-section/roommates-bg.jpg)
+	background-size: cover
+	background-repeat: no-repeat
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		background-color: rgba(85,65,62,.71)
+	h3
+		font-family: "ProximaBold", $helvetica
+		font-size: em(36px)
+		color: #fff
+		position: relative
+		text-align: center
+		text-transform: uppercase
+		margin-bottom: 60px
+	.apartment-card
+		margin-left: 90px
+		position: relative
+		background-color: #fff
+		display: inline-block
+		border: 7px solid #fff
+		box-shadow: 0px 0px 10px 0px rgba(0,0,0,.5)
+		.desc-wrap
+			position: absolute
+			bottom: -100%
+			p
+				font-family: "ProximaNova", $helvetica
+				font-size: em(26px)
+				color: #fff
+				margin-bottom: 25px
+		.img-wrap
+			float: left
+			img
+				width: 420px
+		.info-wrap
+			float: left
+			position: relative
+			p
+				font-family: "ProximaNova", $helvetica
+				font-size: em(20px)
+				color: $burgundy-color
+				line-height: 1
+			.mark-wrap, .distance-wrap
+				padding: 0px 30px
+				text-align: center
+				padding-top: 20px
+				.icon-wrap
+					background-image: url(../img/sprite/sprite-green.png)
+					background-repeat: no-repeat
+					width: 30px
+					height: 33px
+					display: inline-block
+			.distance-wrap
+				.icon-wrap
+					height: 20px
+					background-position: 0px -42px
+			.star-wrap
+				width: 97%
+				height: 65px
+				line-height: 65px
+				border-top: 1px solid rgba(0,0,0,.1)
+				position: absolute
+				bottom: -168px
+				left: 5px
+				text-align: center
+				.icon-wrap
+					background-image: url("../img/sprite/sprite-orange.png")
+					background-repeat: no-repeat
+					background-position: 0px -57px
+					display: inline-block
+					width: 30px
+					height: 28px
+	.desc-wrap-mobile
+		position: relative
+		text-align: center
+		p
+			font-family: "ProximaNova", $helvetica
+			font-size: em(20px)
+			color: #fff
+			margin-bottom: 25px
+
+.section-roommates
+	.chat-card
+		position: relative
+		top: -176px
+		left: -45px
+		display: inline-block
+		background-color: #fff
+		border: 8px solid #fff
+		width: 340px
+		box-shadow: 0px 0px 10px 0px rgba(0,0,0,.5)
+		.title-wrap
+			background-color: $green-color
+			line-height: 90px
+			p
+				position: relative
+				top: 10px
+				right: 20px
+				font-family: "ProximaBold", $helvetica
+				font-size: em(28px)
+				color: #fff
+				text-align: right
+		.companion-message, .own-message
+			border-bottom: 1px solid rgba(0,0,0,.2)
+			.img-wrap
+				float: left
+				position: relative
+				top: -30px
+				width: 110px
+				margin-left: 10px
+				img
+					width: 100%
+					border: 8px solid #fff
+					border-radius: 50%
+			p
+				text-align: center
+				font-family: "ProximaBold", $helvetica
+				font-size: em(16px)
+				color: $burgundy-color
+			.text-wrap
+				float: left
+				padding-left: 20px
+				p
+					text-align: left
+					line-height: 18px
+					margin-top: 20px
+
+		.own-message
+			border-bottom: none
+			padding-top: 15px
+			padding-bottom: 30px
+			.img-wrap
+				top: 0
+			.text-wrap
+				p
+					color: $green-color
+
+		.message-input
+			position: relative
+			background-color: #d4cac8
+			width: 100%
+			line-height: 48px
+			height: 48px
+			.icon-wrap
+				position: relative
+				float: right
+				.icon
+					width: 34px
+					height: 34px
+					background-repeat: no-repeat
+					display: inline-block
+					vertical-align: middle
+					margin: 0px 5px
+				.icon-1
+					background-image: url("../img/sprite/sprite.png")
+					background-position: 0px -95px
+				.icon-2
+					background-image: url("../img/sprite/sprite.png")
+					width: 42px
+					margin-right: 20px
+
+	.btn-wrap
+		position: relative
+		top: -40px
+		width: 100%
+		display: inline-block
+		text-align: center
+		margin: 0 auto
+		.btn-ghost
+			color: #fff
+			border-color: #fff
+			padding: 0px 18px
+			line-height: 54px
+			&:hover
+				color: #000
+				background-color: #fff
+
+.section-meet
+	width: 100%
+	background-color: #fff
+	padding-top: 75px
+	position: relative
+	.decor
+		margin-top: 70px
+		width: 100%
+		height: 1px
+		background-color: rgba(0,0,0,.5)
+	h3
+		text-align: center
+		font-family: "ProximaBold", $helvetica
+		font-size: em(36px)
+		text-transform: uppercase
+		color: $burgundy-color
+		margin-bottom: 50px
+	.item
+		.img-wrap
+			text-align: center
+			border-radius: 50%
+			img
+				border-radius: 50%
+			.count
+				display: none
+		.title-wrap
+			text-align: center
+			.roommate-name
+				font-family: "ProximaBold", $helvetica
+				font-size: em(24px)
+				text-align: center
+				color: $green-color
+				margin: 18px 0px
+		.info-wrap
+			li
+				display: block
+				padding-left: 50px
+				margin-bottom: 5px
+				.icon-wrap, p
+					display: inline-block
+				p
+					font-family: "ProximaBold", $helvetica
+					font-size: em(16px)
+					color: $burgundy-color
+				.icon-wrap
+					position: relative
+					background-image: url("../img/sprite/sprite.png")
+					background-repeat: no-repeat
+					width: 34px
+					height: 34px
+					margin-right: 10px
+				&:first-child
+					.icon-wrap
+						background-position: 0px -95px
+						top: 10px
+				&:last-child
+					.icon-wrap
+						background-position: 0px -57px
+						height: 29px
+						left: 5px
+						top: 7px
+	.item.active
+		.img-wrap
+			.count
+				display: block
+				position: absolute
+				right: 57px
+				top: 0
+				background-color: $green-color
+				color: #fff
+				width: 39px
+				line-height: 35px
+				border-radius: 50%
+				border: 3px solid #fff
+				font-family: "ProximaBold", $helvetica
+				font-size: em(18px)
+		.title-wrap
+			.roommate-name
+				color: $burgundy-color
+		.info-wrap
+			li
+				p
+					color: $orange-color
+				.icon-wrap
+					background-image: url("../img/sprite/sprite-orange.png")
+				&:first-child
+					.icon-wrap
+						background-position: 0px 0px
+						top: 8px
+						height: 26px
+						margin-top: 5px
+				&:last-child
+					.icon-wrap
+						background-position: -100% -24px
+						height: 35px
+						top: 10px
+	.item-2
+		.info-wrap
+			li:first-child
+				.icon-wrap
+					background-position: 0px -130px
+
+.section-banner
+	text-align: center
+	padding: 90px 0px
+	background-color: #fff
+	.banner
+		display: inline-block
+		margin: 0 auto
+		width: 728px
+		height: 90px
+		line-height: 90px
+		background-color: #b2b2b2
+		color: #fff
+		font-family: "ProximaNova", $helvetica
+		font-size: em(36px)
+		text-transform: uppercase
+		cursor: pointer
+
+.section-join
+	width: 100%
+	background-color: #fff
+	padding-top: 65px
+	padding-bottom: 100px
+	border-bottom: 1px solid $burgundy-color
+	.title
+		text-align: center
+		font-family: "ProximaBold", $helvetica
+		font-size: em(36px)
+		color: $burgundy-color
+		text-transform: uppercase
+		margin-bottom: 50px
+	.item
+		.icon-wrap
+			text-align: center
+			margin-bottom: 50px
+			height: 80px
+			.icon
+				display: inline-block
+				width: 80px
+				height: 83px
+				background-image: url("../img/sprite/join-us_sprite.png")
+				background-repeat: no-repeat
+		.text-wrap
+			.text
+				font-family: "ProximaNova", $helvetica
+				font-size: em(16px)
+				font-weight: 600
+				color: #545252
+	.item-2
+		.icon-wrap
+			.icon
+				background-position: 0px -82px
+	.item-3
+		.icon-wrap
+			.icon
+				height: 70px
+				background-position: 0px -160px
+	.item-4
+		.icon-wrap
+			.icon
+				background-position: 0px -226px
+	.item-5
+		.icon-wrap
+			.icon
+				background-position: 0px -305px
+
+.section-info
+	width: 100%
+	background-color: #fff
+	padding-top: 80px
+	padding-bottom: 100px
+	.item
+		.img-wrap
+			text-align: center
+			img
+				width: 420px
+		.title-wrap
+			margin-top: 40px
+			margin-bottom: 30px
+			.title
+				line-height: 1
+				font-family: "ProximaBold", $helvetica
+				font-size: em(22px)
+				text-align: center
+				color: $green-color
+		.text-wrap
+			margin-bottom: 40px
+			.text
+				font-family: "Proximanova", $helvetica
+				font-size: em(15px)
+				font-weight: bold
+				color: $burgundy-color
+		.btn-wrap
+			text-align: center
+			.btn-ghost
+				padding: 0px 15px
+				line-height: 49px
+				font-size: em(18px)
+				color: #99817d
+				border: 2px solid $burgundy-color
+				&:hover
+					color: #fff
+	.item-2
+		.text-wrap
+			.text
+				padding-left: 40px
+
+footer
+	width: 100%
+	background-color: #fff
+	border-top: 2px solid $burgundy-color
+	padding-top: 50px
+	padding-bottom: 100px
+	.list
+		ul
+			li
+				display: block
+				a
+					display: block
+					width: 100%
+					font-family: "ProximaBold", $helvetica
+					font-size: em(20px)
+					color: $burgundy-color
+					transition: all .2s
+					&:hover
+						transition: all .2s
+						color: $green-color
+						padding-left: 10px
+						box-shadow: inset 3px 0px 0px 0px $green-color
+	.list-4
+		.social-wrap
+			.social-item
+				display: inline-block
+				.social-link
+					display: block
+					width: 100%
+					border: 1px solid $burgundy-color
+					width: 40px
+					margin-right: 10px
+					line-height: 36px
+					text-align: center
+					&:hover
+						box-shadow: none
+						padding: 0
+					.fa
+						font-size: em(18px)
+						color: $orange-color
+						position: relative
+						top: 2px
+						transition: all .3s $animate
+			.social-item:last-child
+				.social-link
+					margin-right: 0
+
+
+//////////////////////////////
+/////////////////////////////
+//
+// SEARCH APARTMENTS
+//
+////////////////////////////
+
+.search-apartments-body
+	background-color: #fff
+	.header-bg-images
+		.bg-img
+			width: 100%
+			height: 100%
+			background-repeat: no-repeat
+			background-size: cover
+
+	//Main Screen
+	.main-screen
+		min-height: 220px
+		height: auto
+	
+	//Section Form
+	.section-form
+		width: 100%
+		background-color: #fff
+		padding-top: 20px
+		border-bottom: 1px solid #9a908f
+		position: relative
+		z-index: 10
+		.top-line-form
+			line-height: 50px
+			justify-content: space-between
+			display: flex
+			padding-bottom: 20px
+			border-bottom: 1px solid rgba(0,0,0,.5)
+			.select-search
+				appearance: menulist-button !important
+			.select-district, .select-price, .select-bedrooms
+				display: inline-block
+				.title-wrap
+					display: inline-block
+					.title
+						position: relative
+						font-family: "ProximaBold", $helvetica
+						font-size: em(20px)
+						color: $burgundy-color
+			
+			.select-district
+				.select-search, .info
+					display: inline-block
+				.select-search
+					width: 210px
+					font-size: em(20px)
+					padding: 10px 10px
+					border-radius: 0%
+				.info
+					position: relative
+					top: 8px
+					.icon-wrap, .title-wrap
+						display: inline-block
+					.icon-wrap
+						margin-left: 15px
+						.icon
+							background-image: url("../img/sprite/sprite-green.png")
+							background-repeat: no-repeat
+							background-position: 50% 0px
+							width: 30px
+							height: 33px
+					.title-wrap
+						.title
+							bottom: 8px
+			
+			.select-price
+				margin-left: 15px
+				.input-wrap
+					display: inline-block
+					.input-range
+						color: $green-color
+						font-size: em(20px)
+						max-width: 130px
+						&::placeholder
+							color: $green-color
+					.select-search
+						position: relative
+						top: 2px
+						width: 100px
+						padding: 9px
+						font-size: em(20px)
+						text-transform: uppercase
+						color: $green-color
+			
+			.select-bedrooms
+				float: right
+				position: relative
+				bottom: -3px
+				.input-wrap
+					display: inline-block
+					.select-search
+						width: 140px
+						padding: 10px
+						color: $green-color
+						font-size: em(20px)
+		
+		.bottom-line-form
+			line-height: 70px
+			position: relative
+			.select-wrap, .input-wrap, .buttons-wrap
+				display: inline-block
+			.select-wrap
+				margin-right: 40px
+				cursor: pointer
+				.select-search
+					border: none
+					font-size: em(20px)
+					cursor: pointer
+					user-select: none
+				.open-advanced-search
+					background: none
+					.arrow-down
+						display: inline-block
+						position: relative
+						top: -3px
+						margin-left: 15px
+						width: 13px
+						height: 13px
+						border: 3px solid $burgundy-color
+						border-top: transparent
+						border-left: transparent
+						transform: rotate(45deg)
+						&.arrow-rotate
+							transform: rotate(225deg)
+							top: 3px
+		
+			.input-wrap
+				label
+					font-family: "ProximaBold", $helvetica
+					font-size: em(20px)
+					color: $burgundy-color
+					cursor: pointer
+					margin-right: 37px
+					user-select: none
+					.search-checkbox
+						display: inline-block
+						position: relative
+						top: 5px
+						margin-right: 10px
+						width: 23px
+						height: 23px
+						border: 1px solid $burgundy-color
+						&::before
+							opacity: 0
+							content: ''
+							position: absolute
+							left: 50%
+							top: 50%
+							width: 13px
+							height: 8px
+							border: 3px solid $green-color
+							border-top: none
+							border-right: none
+							transform: translate(-50%, -80%) rotate(-45deg)
+							transition: all .3s $animate
+			.input-wrap
+				input[type="checkbox"]:checked + label .search-checkbox::before
+					opacity: 1
+					transition: all .2s $animate
+		
+			.buttons-wrap
+				float: right
+				.btn-wrap
+					display: inline-block
+					margin-right: 10px
+					.btn-standart
+						text-transform: none
+						font-size: em(20px)
+						width: 160px
+						line-height: 48px
+					.btn-standart
+						&.btn-search
+							background-color: $orange-color
+				.input-search-wrap
+					display: none
+					.input-search
+						display: inline-block
+						width: 350px
+						font-family: "ProximaBold", $helvetica
+						font-size: em(20px)
+						color: $burgundy-color
+						border: 1px solid $burgundy-color
+						padding: 0px 18px
+						line-height: 40px
+	
+	.section-form
+		.advanced-search
+			display: none
+			z-index: 8
+			position: relative
+			top: 100%
+			z-index: 2
+			width: 100%
+			background-color: #fff
+			padding: 20px 0px
+			cursor: default
+			border-top: 1px solid rgba(0,0,0,.5)
+			border-bottom: 4px solid rgba(0,0,0,.5)
+			.close-button-wrap
+				cursor: pointer
+				display: inline-block
+				position: relative
+				margin-left: 20px
+				top: 7px
+				.close-button, .text
+					display: inline-block
+				.close-button
+					width: 25px
+					height: 25px
+					svg
+						width: 100%
+				.text
+					position: relative
+					top: -6px
+					margin-left: 0px
+					font-family: "ProximaNova", $helvetica
+					font-size: em(16px)
+					color: $orange-color
+			.map-wrapper
+				#map
+					width: 100%
+					height: 300px
+			.list-search
+				margin-bottom: 25px
+				.list-title
+					display: inline-block
+					font-family: "ProximaBold", $helvetica
+					font-size: em(20px)
+					color: $burgundy-color
+					margin-bottom: 15px
+					.list-icon
+						display: inline-block
+						width: 30px
+						height: 28px
+						background-image: url("../img/sprite/sprite-green.png")
+						background-repeat: no-repeat
+						background-position: 0px -108px
+						transform: translateY(25%)
+				.list-item
+					display: block
+					line-height: 1.3
+					margin-bottom: 5px
+					cursor: pointer
+					label
+						position: relative
+						display: inline-block
+						width: 100%
+						padding-left: 40px
+						font-family: "ProximaLight", $helvetica
+						font-size: em(18px)
+						color: $burgundy-color
+						transition: all .3s $animate
+						cursor: pointer
+						user-select: none
+						&::before
+							opacity: 0
+							content: ''
+							position: absolute
+							left: 7px
+							top: 0
+							width: 10px
+							height: 15px
+							border: 3px solid $green-color
+							border-top: none
+							border-left: none
+							transform: rotate(45deg)
+							transition: all .3s $animate
+					.list-radio:checked + label
+						color: $green-color
+						&::before
+							transition: all .3s $animate
+							opacity: 1
+			.list-search-2 .list-title .list-icon
+				background-position: 0px -170px
+			.list-search-3 .list-title .list-icon
+				background-position: 0px -203px
+			.list-search-4 .list-title .list-icon
+				height: 29px
+				background-position: 0px -234px
+			.advanced-buttons-wrap
+				cursor: default
+				margin-top: 40px
+				.search-buttons-wrap, .enlarge-wrap
+					display: inline-block
+				.search-buttons-wrap
+					float: right
+					margin-right: 20px
+					.btn-wrap
+						display: inline-block
+						margin-left: 10px
+						.btn-standart
+							text-transform: none
+							font-size: em(20px)
+							width: 160px
+							line-height: 48px
+						.btn-standart
+							&.btn-search
+								background-color: $orange-color
+				.enlarge-wrap
+					margin-left: 5px
+					cursor: pointer
+					a
+						outline: none
+					.text
+						font-family: "ProximaNova", $helvetica
+						font-size: em(16px)
+						color: $burgundy-color
+					.icon
+						display: inline-block
+						transform: translateY(25%)
+						width: 35px
+						height: 35px
+						background-repeat: no-repeat
+						background-position: 50% -162px
+						margin-right: 10px
+						svg
+							width: 100%
+
+	//Section Featured Listings
+	.section-featured-listings
+		padding-top: 110px
+		padding-bottom: 90px
+		background-color: #fff
+		position: relative
+		z-index: 1
+		.title
+			font-family: "ProximaBold", $helvetica
+			font-size: em(36px)
+			text-transform: uppercase
+			color: $burgundy-color
+			text-align: center
+			margin-bottom: 60px
+		.img-wrap
+			text-align: center
+			width: 100%
+			img
+				width: 95%
+		.title-wrap
+			margin-top: 18px
+			margin-bottom: 20px
+			p
+				font-family: "ProximaBold", $helvetica
+				font-size: em(26px)
+				text-align: center
+				color: $title-color
+				line-height: 1
+				min-height: 53px
+		.info-wrap
+			li
+				display: block
+				margin-bottom: 5px
+				p
+					font-family: "ProximaNova", $helvetica
+					font-size: em(16px)
+					color: $title-color
+					display: inline-block
+					line-height: 18px
+					span
+						font-family: "ProximaBold", $helvetica
+					.view-details
+						color: $orange-color
+						text-align: right
+						margin-left: 30px
+						cursor: pointer
+			li
+				.icon-wrap
+					width: 30px
+					height: 31px
+					display: inline-block
+					margin-right: 15px
+					position: relative
+					background-repeat: no-repeat
+			li:first-child
+				.icon-wrap
+					left: 0px
+					background-image: url("../img/sprite/sprite-orange.png")
+					background-position: 0px -24px
+			li:nth-child(2)
+				.icon-wrap
+					top: 2px
+					height: 20px
+					background-image: url("../img/sprite/sprite-orange.png")
+					background-position: 0px -116px
+			li:last-child
+				.icon-wrap
+					height: 27px
+					top: 5px
+					background-image: url("../img/sprite/sprite-orange.png")
+					background-position: 0px -87px
+			.text-wrap
+				margin-top: 10px
+				margin-bottom: 15px
+				min-height: 70px
+				.text
+					font-family: "ProximaNova", $helvetica
+					font-size: em(15px)
+					line-height: 22px
+					color: $text-color
+		.functions-wrap
+			border-top: 1px solid #c0b2af
+			padding-top: 5px
+			ul
+				display: flex
+				justify-content: space-around
+				li
+					cursor: pointer
+					font-family: "ProximaBold", $helvetica
+					font-size: em(16px)
+					color: $green-color
+					transition: all .3s $animate
+					&:hover
+						transition: all .3s $animate
+						color: $orange-color
+
+	//Section Apartments
+	.section-apartments
+		.title
+			font-family: "ProximaBold", $helvetica
+			font-size: em(36px)
+			line-height: 1
+			text-transform: uppercase
+			color: $burgundy-color
+			text-align: center
+			margin-bottom: 60px
+		.sort-wrap
+			border-bottom: 1px solid rgba(0,0,0,.2)
+			line-height: 70px
+			height: 70px
+			padding: 0px 15px
+			margin-bottom: 30px
+			.title
+				font-family: "ProximaBold", $helvetica
+				font-size: em(20px)
+				color: $burgundy-color
+				text-transform: none
+			.sort-title, .filter-wrap
+				display: inline-block
+			.sort-title
+				margin-right: 30px
+			.filter-wrap
+				.text
+					display: inline-block
+					font-family: "ProximaBold", $helvetica
+					font-size: em(20px)
+					color: $burgundy-color
+				.filter-item
+					margin-right: 45px
+					cursor: pointer
+					padding: 0px 10px
+					line-height: 30px
+					.icon
+						display: inline-block
+						width: 30px
+						height: 34px
+						background-image: url("../img/sprite/sprite-green.png")
+						background-repeat: no-repeat
+				.filter-item-1
+					.icon
+						transform: translateY(30%)
+						background-size: 80%
+				.filter-item-2
+					.icon
+						height: 18px
+						width: 22px
+					.icon:first-of-type
+						background-position: 0px -65px
+					.icon:last-of-type
+						background-position: 0px -87px
+				.filter-item-3
+					.icon
+						height: 20px
+						background-position: 0px -38px
+				.filter-item-4
+					.icon
+						height: 22px
+						background-position: 0px -144px
+				.filter-item-5
+					.icon
+						height: 25px
+						background-position: 0px -110px
+				.filter-item-active
+					border-bottom: 3px solid $green-color
+			
+		
+		.content
+			.item-highlighting
+				.item-wrap
+					margin-bottom: 100px
+					padding: 17px
+					background-color: $orange-color
+				p, li, span
+					color: #fff
+				.title-wrap
+					p
+						line-height: 1
+						min-height: 53px
+				.functions-wrap
+					border-top: 1px solid #fff
+					padding-top: 5px
+					margin-top: 10px
+					ul
+						display: flex
+						justify-content: space-around
+						li
+							cursor: pointer
+							font-family: "ProximaBold", $helvetica
+							font-size: em(16px)
+							transition: all .3s $animate
+							&:hover
+								transition: all .3s $animate
+								color: $burgundy-color
+				.info-wrap
+					li
+						.icon-wrap
+							left: 0
+							background-image: url("../img/sprite/sprite-white.png")
+					li:first-child
+						.icon-wrap
+							background-position: 0px -30px
+					li:nth-child(2)
+						.icon-wrap
+							background-position: 0px -62px
+					li:last-child
+						.icon-wrap
+							background-position: 0px 0px
+			
+			.item-stroke
+				.img-wrap
+					&.no-photo
+						img
+							display: block
+							border: 2px solid $orange-color
+				.title-wrap
+					p
+						color: $orange-color
+						line-height: 1
+						min-height: 53px
+				.item-wrap
+					padding: 17px
+					border: 2px solid $orange-color
+				.info-wrap
+					li
+						.icon-wrap
+							left: 0
+							background-image: url("../img/sprite/sprite-gray.png")
+					li:first-child
+						.icon-wrap
+							background-position: 0px -30px
+					li:nth-child(2)
+						.icon-wrap
+							background-position: 0px -62px
+					li:last-child
+						.icon-wrap
+							background-position: 0px 0px
+				.functions-wrap
+					border-top: 1px solid #fff
+					padding-top: 5px
+					margin-top: 10px
+					ul
+						display: flex
+						justify-content: space-around
+						li
+							cursor: pointer
+							font-family: "ProximaNova", $helvetica
+							font-size: em(16px)
+							transition: all .3s $animate
+							&:hover
+								transition: all .3s $animate
+								color: $green-color
+	
+	//Section Pagination
+	.section-pagination
+		line-height: 80px
+		.content
+			padding: 35px 0px
+			border-top: 1px solid rgba(0,0,0,.2)
+			.pagination-number, .pagination-arrows
+				display: inline-block
+			.pagination-number
+				.pagination-item
+					width: 40px
+					height: 40px
+					line-height: 40px
+					text-align: center
+					transition: all .3s $animate
+					&:hover
+						box-shadow: inset 0px 0px 0px 1px $green-color
+					.pagination-link
+						font-family: "ProximaBold", $helvetica
+						font-size: em(20px)
+						color: $burgundy-color
+						display: block
+						width: 100%
+					&.pagination-item-active
+						background-color: $green-color
+						.pagination-link
+							color: #fff
+			.pagination-arrows
+				margin-left: 60px
+				.arr
+					position: relative
+					display: inline-block
+					width: 40px
+					height: 40px
+					line-height: 40px
+					background-color: $green-color
+					&::before
+						content: ''
+						position: absolute
+						left: 50%
+						top: 50%
+						transform: translate(-30%,-50%) rotate(45deg)
+						width: 15px
+						height: 15px
+						border: 4px solid #fff
+						border-top: none
+						border-right: none
+					&.arr-right::before
+						transform: translate(-60%,-50%) rotate(-135deg)
+					.arr-decor
+						display: block
+						width: 100%
+						color: transparent
+			.btn-wrap
+				float: right
+				.btn-standart
+					font-size: em(20px)
+					text-transform: none
+					padding: 0px 20px
+					line-height: 50px
+	
+	//Section Banner
+	.section-banner
+		text-align: left
+		.banner
+			text-align: center
+		.banner-float
+			width: 400px
+			padding: 0px 20px
+			float: right
+
+//Styles For Map Pop-Up
+.mfp-iframe-holder
+	.mfp-content
+		max-width: 75% !important
+
+
+///////////////////////////////
+//////////////////////////////
+// Login / Registration Section
+///////////////////////////////
+
+.login-registration-section
+	position: fixed
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	padding: 100px 0px
+	overflow: hidden
+	z-index: -100
+	background-color: rgba(43,20,15,.84)
+	opacity: 0
+	&.active
+		transition: all .3s $animate
+		opacity: 1
+		z-index: 9999
+		position: fixed
+		overflow-y: scroll
+	
+	///////////////////////
+	//////////////////////
+	//////////////////////
+	//Login - Registration
+	.login-registration-wrap
+		width: 100%
+		position: relative
+		background-color: #fff
+		padding-top: 95px
+		padding-bottom: 115px
+		z-index: 10000
+		.col-md-6
+			padding: 0
+		.sign-up-wrap
+			padding-bottom: 30px
+			border-right: 1px solid rgba(0,0,0,.4)
+		.sign-up-wrap, .login-wrap
+			text-align: center
+			.sign-up-title, .login-title
+				margin-bottom: 30px
+				.title
+					font-family: "ProximaBold", $helvetica
+					font-size: em(36px)
+					color: $burgundy-color
+					text-transform: uppercase
+					line-height: 1
+			.sign-up-form, .login-form
+				.form-group
+					line-height: 40px
+					min-height: 40px
+					&.has-error
+						.form-control
+							border-color: $orange-color
+							margin-bottom: 15px
+						.help-block
+							display: block
+							position: relative
+							font-family: "ProximaBold", $helvetica
+							font-size: em(18px)
+							color: $orange-color
+							line-height: 1
+							margin-bottom: 15px
+							text-align: left
+							padding-left: 90px
+					.help-block
+						display: none
+					.form-control
+						border-radius: 0
+						line-height: 1
+						height: 40px
+				.sign-up-input, .login-input
+					width: 75%
+					margin-bottom: 20px
+					display: inline-block
+					font-size: em(20px)
+					padding: 0px 15px
+					line-height: 40px
+					&:last-child
+						margin-bottom: 0
+			.or
+				font-family: "ProximaBold", $helvetica
+				font-size: em(24px)
+				color: $burgundy-color
+				line-height: 1
+				margin: 15px 0px
+			.btn-facebook
+				margin-bottom: 28px
+				.btn-ghost
+					display: inline-block
+					font-family: "ProximaBold", $helvetica
+					font-size: em(20px)
+					color: $blue-color
+					border-color: $blue-color
+					padding: 0px 33px
+					line-height: 42px
+					&:hover
+						background-color: $blue-color
+						color: #fff
+			.text-wrap
+				text-align: center
+				margin-bottom: 35px
+				.text
+					display: inline-block
+					font-family: "ProximaBold", $helvetica
+					font-size: em(20px)
+					color: $burgundy-color
+					width: 70%
+					line-height: 1.2
+			.btn-join
+				margin-top: 40px
+				.btn-standart
+					background-color: $orange-color
+					text-transform: none
+					font-size: em(20px)
+					width: 157px
+					padding: 0px 5px
+					line-height: 48px
+		.login-wrap
+			.login-form
+				margin-bottom: 40px
+				.form-group
+					&.has-error
+						.login-input
+							border-color: $orange-color
+							margin-bottom: 15px
+						.help-block
+							display: block
+							position: relative
+							font-family: "ProximaBold", $helvetica
+							font-size: em(18px)
+							color: $orange-color
+							line-height: 1
+							margin-bottom: 15px
+							text-align: left
+							padding-left: 90px
+					.help-block
+						display: none
+			.btn-join
+				margin-bottom: 20px
+				.btn-standart
+					width: 156px
+		.text-wrap
+			margin-top: 18px
+			margin-bottom: 35px
+		.forgot-wrap
+			.forgot-password
+				float: left
+				font-family: "ProximaBold", $helvetica
+				font-size: em(20px)
+				color: $burgundy-color
+				padding-left: 40px
+			.keep-loged
+				label
+					font-family: "ProximaBold", $helvetica
+					font-size: em(20px)
+					color: $burgundy-color
+					cursor: pointer
+					user-select: none
+					position: relative
+					padding-left: 35px
+					&::before
+						content: ''
+						display: inline-block
+						width: 24px
+						height: 24px
+						border: 1px solid rgba(0,0,0,.3)
+						position: absolute
+						top: 5px
+						margin-right: 10px
+						left: 0
+					&::after
+						content: ''
+						position: absolute
+						left: 5px
+						top: 50%
+						transform: translateY(-50%) rotate(-45deg)
+						width: 13px
+						height: 9px
+						border: 3px solid $green-color
+						border-top: none
+						border-right: none
+						opacity: 0
+						transition: all .2s $animate
+				input[type="checkbox"]:checked + label::after
+					opacity: 1
+		
+	//////////////////////
+	//Close Button
+	.login-registration-wrap
+		.btn-close
+			position: absolute
+			width: 30px
+			height: 30px
+			right: 10px
+			top: 10px
+			cursor: pointer
+			width: 100px
+			span
+				position: relative
+				font-family: "ProximaNova", $helvetica
+				font-size: em(16px)
+				color: $orange-color
+				margin-left: 5px
+				top: -10px
+			svg
+				width: 30px
+	
+	///////////////
+	///////////////
+	///////////////
+	//Registration Teasers
+	.login-registration-wrap
+		.registration-teasers
+			margin-top: 35px
+			padding-top: 70px
+			padding-bottom: 110px
+			border-top: 3px solid rgba(0,0,0,.3)
+			.title-wrap
+				text-align: center
+				.title
+					font-family: "ProximaBold", $helvetica
+					font-size: em(24px)
+					color: $burgundy-color
+					line-height: 1
+					margin-bottom: 40px
+			.teasers-wrap
+				padding-left: 150px
+				.teaser-item
+					display: block
+					font-family: "ProximaBold", $helvetica
+					font-size: em(20px)
+					color: $burgundy-color
+					position: relative
+					padding-left: 30px
+					&::before
+						content: ''
+						position: absolute
+						left: 0
+						top: 6px
+						transform: rotate(-45deg)
+						width: 15px
+						height: 10px
+						border: 3px solid $green-color
+						border-top: none
+						border-right: none
+	
+///////////////
+///////////////
+///////////////
+//Blocked Page
+///////////////
+///////////////
+.login-registration-section
+	.blocked-page, .registred-page
+		text-align: center
+		.title-wrap
+			.title
+				font-family: "ProximaBold", $helvetica
+				font-size: em(34px)
+				color: $green-color
+				line-height: 1.4
+				span
+					display: block
+					color: $burgundy-color
+					font-size: em(12px)
+		.img-wrap
+			margin-top: 55px
+			margin-bottom: 45px
+		.text-wrap
+			margin-bottom: 50px
+			.text
+				font-family: "ProximaBold", $helvetica
+				font-size: em(26px)
+				color: $burgundy-color
+		.btn-wrap
+			margin-bottom: 60px
+			.btn-standart
+				background-color: $orange-color
+				text-transform: none
+				width: 160px
+				padding: 0px 10px
+				line-height: 50px
+		.teasers-wrap
+			padding-top: 50px
+			border-top: 1px solid rgba(0,0,0,.5)
+			.teaser
+				.teaser-title
+					margin-bottom: 10px
+					.title
+						font-family: "ProximaBold", $helvetica
+						font-size: em(20px)
+						color: $green-color
+						line-height: 1
+				.teaser-info
+					.info
+						font-family: "ProximaNova", $helvetica
+						font-size: em(16px)
+						color: #000
+	.registred-page
+		&.payment-failed
+			.title-wrap
+				margin-bottom: 50px
+
+///////////////
+///////////////
+///////////////
+//Reset Page
+///////////////
+///////////////
+.login-registration-section
+	.reset-page, .reset-letter-sent
+		text-align: center
+		.title-wrap
+			margin-bottom: 30px
+			.title
+				font-family: "ProximaBold", $helvetica
+				font-size: em(34px)
+				color: $green-color
+		.text-wrap
+			margin-bottom: 50px
+			.text
+				font-family: "ProximaBold", $helvetica
+				font-size: em(22px)
+				color: $burgundy-color
+		.reset-form
+			.form-group
+				line-height: 40px
+				min-height: 40px
+				.form-control
+					border-radius: 0
+					line-height: 1
+					height: 40px
+				.std-input
+					display: inline-block
+					width: 360px
+					padding: 0px 17px
+					line-height: 40px
+					font-size: em(20px)
+			.form-group
+				&.has-error
+					.login-input:first-child
+						border-color: $orange-color
+						margin-bottom: 15px
+					.help-block
+						display: block
+						position: relative
+						font-family: "ProximaBold", $helvetica
+						font-size: em(18px)
+						color: $orange-color
+						line-height: 1
+						margin-top: 15px
+						text-align: left
+						text-align: center
+				.help-block
+					display: none
+			.btn-wrap
+				margin-top: 65px
+				.btn-standart
+					background-color: $orange-color
+					text-transform: none
+					width: 160px
+					padding: 0px 10px
+					line-height: 50px
+
+///////////////
+///////////////
+///////////////
+//Reset Letter Sent
+///////////////
+///////////////
+.login-registration-section
+	.reset-letter-sent
+		.btn-wrap
+			margin-top: 50px
+			.btn-standart
+				background-color: $orange-color
+				text-transform: none
+				width: 160px
+				padding: 0px 10px
+				line-height: 50px
+
+///////////////
+///////////////
+///////////////
+//Buy Credits
+///////////////
+///////////////
+.login-registration-section
+	.buy-credits
+		.title-wrap
+			text-align: center
+			.title
+				font-family: "ProximaBold", $helvetica
+				font-size: em(34px)
+				color: $green-color
+		.text-wrap
+			text-align: center
+			padding: 0px 65px
+			.text
+				font-family: "ProximaBold", $helvetica
+				font-size: em(22px)
+				color: $burgundy-color
+		.form-buy-credits
+			.form-group
+				.form-item
+					width: 100%
+					text-align: center
+					label
+						cursor: pointer
+						font-family: "ProximaBold", $helvetica
+						font-size: em(38px)
+						color: $orange-color
+						position: relative
+						transition: all .2s $animate
+						&::before, &::after
+							content: ''
+							position: absolute
+						&::before
+							width: 20px
+							height: 20px
+							border: 1px solid $burgundy-color
+							border-radius: 50%
+							left: -33px
+							top: 18px
+						&::after
+							width: 12px
+							height: 12px
+							background-color: $green-color
+							border-radius: 50%
+							left: -29px
+							top: 22px
+							transition: all .2s $animate
+							opacity: 0
+						span
+							font-size: em(11px)
+					input:checked + label
+						color: $green-color
+						&::after
+							transition: all .2s $animate
+							opacity: 1
+					.price-placeholder
+						font-family: "ProximaNova", $helvetica
+						font-size: em(22px)
+						color: $burgundy-color
+						line-height: 1.2
+						span
+							color: #ab9592
+							padding-left: 7px
+			.choose-method
+				text-align: center
+				border-top: 1px solid rgba(0,0,0,.3)
+				padding-top: 15px
+				margin-top: 45px
+				.choose-method-item
+					width: 100%
+					padding: 0px 20px
+					&.choose-method-paypal
+						border-right: 1px solid rgba(0,0,0,.3)
+					.title-wrap
+						margin-bottom: 40px
+						margin-top: 20px
+						.title
+							font-family: "ProximaBold", $helvetica
+							font-size: em(24px)
+							color: $green-color
+							line-height: 1
+					.text-wrap
+						.text
+							font-family: "ProximaNova", $helvetica
+							font-size: em(20px)
+							color: $burgundy-color
+							line-height: 1.2
+					.icon-wrap
+						margin: 40px 0px
+						text-align: center
+						.icon
+							width: 160px
+					.btn-wrap
+						text-align: center
+						.btn-standart
+							width: auto
+							display: inline-block
+							font-size: em(20px)
+							text-transform: none
+							padding: 0px 40px
+							line-height: 50px
+					.bank-info
+						.bank-info-item
+							display: block
+							font-family: "ProximaNova", $helvetica
+							font-size: em(20px)
+							color: $burgundy-color
+							line-height: 1
+							margin-bottom: 7px
+					.input-wrap
+						margin-bottom: 35px
+						.std-input
+							margin-top: 20px
+							font-size: em(20px)
+							font-family: "ProximaNova", $helvetica
+							padding: 0px 20px
+							line-height: 43px
+
+
+
+/////////////////////////////////////////////////////////
+/////////////// User Room //////////////////////////////////
+
+// Header Section
+.user-room, .looking-apartment
+	width: 100%
+	.section-header
+		width: 100%
+		min-height: 220px
+		height: 220px
+		.img-wrap
+			width: 100%
+			height: 100%
+			.img
+				background-size: cover
+				background-repeat: no-repeat
+				width: 100%
+				height: 100%
+
+.user-room, .looking-apartment
+	.section-room
+		padding-bottom: 60px
+
+// Aside User Room
+.user-room, .looking-apartment
+	.profile
+		background-color: #fff
+		position: relative
+		top: -80px
+		// Profile Info
+		.profile-info
+			width: 100%
+			.profile-img
+				width: 200px
+				height: 200px
+				margin: 0 auto
+				.img
+					width: 100%
+					height: 100%
+					border: 5px solid #fff
+					background-size: cover
+					background-repeat: no-repeat
+					border-radius: 50%
+			.username-wrap
+				width: 100%
+				text-align: center
+				margin-top: 20px
+				margin-bottom: 15px
+				.text
+					font-family: "ProximaBold", $helvetica
+					font-size: em(24px)
+					color: $green-color
+					line-height: 1
+	
+		// Profile Menu
+		.profile-mnu
+			padding-bottom: 20px
+			border-bottom: 1px solid rgba(0,0,0,.2)
+			.profile-mnu-item
+				display: block
+				margin-bottom: 10px
+				&:last-child
+					margin-bottom: 0
+				.profile-mnu-link
+					display: block
+					width: 100%
+					font-family: "ProximaBold", $helvetica
+					font-size: em(20px)
+					color: $burgundy-color
+					position: relative
+					padding-left: 35px
+					&::before
+						content: ''
+						position: absolute
+						left: 0
+						top: 0
+						width: 27px
+						height: 30px
+						background-image: url("../img/admin/icons/sprite-small-burgundy.png")
+						background-repeat: no-repeat
+					&.profile-mnu-link-active
+						color: $orange-color
+						&::before
+							background-image: url("../img/admin/icons/sprite-small-orange.png")
+			.profile-mnu-item:nth-of-type(2)
+				.profile-mnu-link::before
+					background-position: -3px -30px
+			.profile-mnu-item:nth-of-type(3)
+				.profile-mnu-link::before
+					background-position: -2px -60px
+			.profile-mnu-item:nth-of-type(4)
+				.profile-mnu-link::before
+					background-position: 0px -120px
+			.profile-mnu-item:nth-of-type(5)
+				.profile-mnu-link::before
+					background-position: -2px -90px
+			.profile-mnu-item:nth-of-type(6)
+				.profile-mnu-link::before
+					background-position: 0px -152px
+	
+		// Facebook Button
+		.facebook-btn
+			padding: 25px 0px
+			.btn-wrap
+				width: 100%
+				.btn-ghost
+					display: block
+					width: 100%
+					text-align: center
+					font-family: "ProximaBold", $helvetica
+					font-size: em(18px)
+					color: $blue-color
+					border-color: $blue-color
+					line-height: 41px
+					&:hover
+						color: #fff
+						background-color: $blue-color
+	
+		// Facebook Box
+		.facebook-box
+			width: 100%
+			margin-bottom: 23px
+			.banner-wrap
+				width: 100%
+				.banner
+					width: 100%
+					height: 247px
+					background-color: #cbcbcb
+	
+		// Adverts Banner
+		.adverts-banner
+			width: 100%
+			.banner-wrap
+				width: 100%
+				.banner
+					width: 100%
+					height: 620px
+					background-color: #cbcbcb
+
+// Credits Info
+.credits-info
+	display: inline-block
+	position: relative
+	top: -40px
+	right: 63px
+	float: right
+	padding: 10px 20px
+	border-radius: 3px
+	background-color: #fff
+	z-index: 100
+	.own-credits, .buy-credits
+		display: inline-block
+		.text, .link
+			font-family: "ProximaBold", $helvetica
+			font-size: em(18px)
+			transition: all .3s $animate
+			line-height: 1
+			color: $burgundy-color
+			margin-right: 10px
+			cursor: default
+		.link
+			margin-right: 0
+			margin-left: 10px
+			color: $green-color
+			position: relative
+			cursor: pointer
+			&::before
+				content: ''
+				position: absolute
+				width: 1px
+				height: 17px
+				background-color: $green-color
+				left: -13px
+				top: 0
+
+// Content
+.user-room, .looking-apartment
+	.content
+		position: relative
+		top: -40px
+		.banner-wrap
+			padding-top: 20px
+			width: 100%
+			text-align: center
+			.bann
+				display: inline-block
+				width: 728px
+				height: 90px
+				background-color: #cbcbcb
+		.text-wrap
+			padding: 45px 0px
+			width: 100%
+			text-align: center
+			.text
+				font-family: "ProximaBold", $helvetica
+				font-size: em(28px)
+				color: $orange-color
+		.steps-wrap
+			display: flex
+			padding-bottom: 45px
+			.step
+				width: 200px
+				text-align: center
+				cursor: default
+				&.step-active
+					.circle-wrap
+						.number
+							color: #fff
+							border-color: $green-color
+							background-color: $green-color
+							transition: all .3s $animate
+							transition-delay: .3s
+						.line::before
+							transform: translateX(0%)
+				.circle-wrap
+					display: inline-block
+					position: relative
+					.number
+						width: 50px
+						height: 50px
+						background-color: #fff
+						border: 3px solid $burgundy-color
+						border-radius: 50%
+						vertical-align: middle
+						text-align: center
+						font-family: "ProximaBold", $helvetica
+						font-size: em(28px)
+						color: $burgundy-color
+						position: relative
+						z-index: 1
+					.line
+						position: absolute
+						width: 160px
+						height: 3px
+						right: 100%
+						top: 50%
+						transform: translateY(-50%)
+						background-color: #d1c7c5
+						z-index: -12
+						overflow: hidden
+						&::before
+							content: ''
+							position: absolute
+							left: 0
+							top: 0
+							width: 100%
+							height: 100%
+							transform: translateX(-110%)
+							transition: all .2s linear
+							background-color: $green-color
+				.text-wrap
+					padding: 0
+					margin-top: 18px
+					.text
+						max-width: 140px
+						margin: 0 auto
+						font-family: "ProximaBold", $helvetica
+						font-size: em(18px)
+						color: $burgundy-color
+						line-height: 1.4
+			
+		// Form Wrap
+		.location-form
+			padding: 10px 10px
+			.form-group
+				display: inline-block
+				width: 48%
+				margin-right: 1%
+				margin-bottom: 20px
+				&:nth-of-type(even)
+					margin-right: 0
+				select, .std-input
+					font-size: em(20px)
+					padding: 0px 17px
+					line-height: 42px
+					height: 42px
+				.std-input
+					display: block
+					width: 100%
+		.btn-wrap
+			display: block
+			text-align: right
+			.btn-standart
+				background-color: $orange-color
+				text-transform: none
+				font-size: em(20px)
+				padding: 0px 60px
+				line-height: 50px
+		
+		// Map Wrapper
+		.map-wrap
+			width: 100%
+			height: 300px
+			margin-bottom: 20px
+			#map-canvas
+				width: 100%
+				height: 100%
+
+// USER ROOM STEP 2
+.user-room, .looking-apartment
+	.step-2, .content
+		.form-step-2, .form-step
+			width: 100%
+			.form-part
+				padding: 30px 0px 25px 20px
+				border-bottom: 3px solid rgba(0,0,0,.2)
+				&:last-of-type
+					border-bottom: none
+				.form-group
+					.title, span
+						display: inline-block
+						width: 50%
+						font-family: "ProximaBold", $helvetica
+						font-size: em(20px)
+						color: $burgundy-color
+					span
+						width: auto
+					.title
+						i
+							color: $orange-color
+					.std-input, select
+						display: inline-block
+						width: 105px
+						line-height: 43px
+						height: 43px
+						font-size: em(20px)
+					.std-input
+						margin-right: 10px
+						padding: 0px 5px
+						&.select-part-3
+							width: 45%
+					select
+						text-align: center
+					.form-checkbox-wrap
+						display: inline-block
+						width: 50%
+						float: right
+						.form-checkbox
+							margin-bottom: 5px
+							cursor: pointer
+							&:nth-of-type(odd)
+								width: 45%
+							&:nth-of-type(even)
+								width: 45%
+								padding-left: 30px
+							input
+								display: none
+							label
+								position: relative
+								font-family: "ProximaBold", $helvetica
+								font-size: em(20px)
+								color: $burgundy-color
+								transition: all .2s $animate
+								user-select: none
+								cursor: pointer
+								&::before
+									opacity: 0
+									content: ''
+									position: absolute
+									left: -20px
+									top: 8px
+									width: 14px
+									height: 9px
+									border: 3px solid $green-color
+									border-top: none
+									border-right: none
+									transform: rotate(-45deg)
+									transition: all .2s $animate
+							input:checked + label
+								color: $green-color
+								transition: all .2s $animate
+								&::before
+									opacity: 1
+									transition: all .2s $animate
+				.form-group
+					&.number-of-bedrooms, &.furnished
+						select
+							width: 335px
+				.form-group
+					&.size
+						.std-input
+							width: 120px
+				.form-group
+					&.total-number-of-rooms
+						.std-input
+							width: 230px
+				.form-group
+					&.term-of-lease
+						.title
+							width: 50%
+						.form-checkbox-wrap
+							padding-left: 5px
+				.form-group
+					&.avaliable-from
+						margin-top: 20px
+						.title
+							width: 50%
+						.bootstrap-calendar
+							width: 45%
+							display: inline-block
+							background-color: #fff
+							padding: 0px 10px
+							cursor: pointer
+							background-image: url("../img/sprite/sprite-green.png")
+							background-repeat: no-repeat
+							background-position: 95% -103px
+				.form-group
+					&.common-cost
+						.checkbox
+							width: 25%
+							display: inline-block
+							input
+								display: none
+							label
+								font-family: "ProximaBold", $helvetica
+								font-size: em(20px)
+								color: $burgundy-color
+								text-align: right
+								position: relative
+								margin-left: 17px
+								user-select: none
+								&::before, &::after
+									content: ''
+									position: absolute
+									transition: all .2s $animate
+								&::before
+									width: 23px
+									height: 23px
+									top: 4px
+									left: -7px
+									border: 1px solid rgba(0,0,0,.2)
+								&::after
+									opacity: 0
+									top: 9px
+									left: -2px
+									width: 14px
+									height: 9px
+									border: 3px solid $green-color
+									border-top: none
+									border-right: none
+									transform: rotate(-45deg)
+							input:checked + label
+								&::before
+									border-color: $green-color
+									transition: all .2s $animate
+								&::after
+									opacity: 1
+									transition: all .2s $animate
+				.form-group
+					&.near-to-metro, &.surroundings
+						margin-top: 30px
+				.form-group
+					&.distance-to-transport
+						margin-top: 20px
+						.std-input
+							width: 130px
+							margin-left: 0px
+				.form-group
+					&.surroundings
+						.form-checkbox
+							&:last-of-type
+								height: 50px
+								label
+									line-height: 1.2
+							label
+								position: relative
+								margin-bottom: 0
+								span
+									display: block
+									position: absolute
+									font-size: em(13px)
+									left: 0
+									line-height: 1
+				.form-group
+					&.amenities
+						margin-top: 40px
+						.form-checkbox-wrap
+							.form-checkbox
+								display: block
+								padding-left: 0
+				.form-group
+					&.description
+						.std-input
+							width: 100%
+							min-height: 240px
+							resize: none
+				.form-group
+					&.button-next
+						text-align: right
+		.btn-wrap
+			display: inline-block
+			float: right
+			.btn-standart
+				background-color: $orange-color
+				text-transform: none
+				font-size: em(20px)
+				padding: 0px 60px
+				line-height: 50px
+
+// USER ROOM STEP 3
+.user-room
+	.step-3
+		.text-wrap
+			padding: 0
+			margin-bottom: 15px
+			.text
+				color: $burgundy-color
+				font-size: em(24px)
+		.upload-img
+			.click-upload
+				padding-top: 25px
+				padding-bottom: 70px
+				.btn-wrap
+					text-align: center
+					.btn-standart
+						font-size: em(20px)
+						text-transform: none
+						padding: 0px 30px
+						line-height: 42px
+						background-color: $green-color
+		.set-img
+			width: 100%
+			border-bottom: 3px solid rgba(0,0,0,.3)
+			.item
+				width: 32%
+				margin-bottom: 35px
+				margin-right: 5px
+				position: relative
+				display: inline-block
+				&:nth-of-type(3n+3)
+					margin-right: 0
+				.img-wrap
+					height: 175px
+					margin-bottom: 10px
+					.img
+						width: 100%
+						height: 100%
+						background-size: cover
+						background-repeat: no-repeat
+				.btn-wrap
+					position: absolute
+					top: 5px
+					right: 5px
+					height: 31px
+					.btn-icon
+						width: 30px
+						height: 30px
+						background-color: #fff
+						border-radius: 50%
+						display: inline-block
+						position: relative
+						cursor: pointer
+						transition: all .3s $animate
+						&:hover
+							transition: all .3s $animate
+							box-shadow: 0px 0px 10px 0px rgba(0,0,0,.3)
+						&:first-of-type
+							margin-right: 5px
+						&.btn-close, &.btn-done
+							&::before, &::after
+								content: ''
+								position: absolute
+								top: 50%
+								left: 50%
+						&.btn-close
+							&::before, &::after
+								background-color: $burgundy-color
+								width: 18px
+								height: 2.5px
+								border-radius: 10px
+							&::before
+								transform: translate(-50%, -50%) rotate(-45deg)
+							&::after
+								transform: translate(-50%, -40%) rotate(45deg)
+						&.btn-done
+							&::before
+								width: 16px
+								height: 10px
+								border: 3px solid $orange-color
+								border-top: none
+								border-right: none
+								transform: translate(-50%, -70%) rotate(-45deg)
+							&.btn-done-green
+								&::before
+									border-color: $green-color
+								
+							
+				.form-group
+					.std-input
+						display: inline-block
+						border-color: transparent
+						box-shadow: none
+						width: 86%
+						&:focus
+							border: 1px solid $green-color
+						&:focus + .icon
+							background-image: url("../img/admin/icons/sprite-small-green.png")
+							background-position: 4px -154px
+					.icon
+						display: inline-block
+						float: right
+						width: 12%
+						height: 25px
+						background-image: url("../img/admin/icons/sprite-small-orange.png")
+						background-repeat: no-repeat
+						background-size: 23px
+						background-position: 4px -181px
+		.btn-next
+			text-align: right
+			margin-top: 25px
+			.btn-standart
+				font-size: em(20px)
+				text-transform: none
+				padding: 0px 60px
+				line-height: 50px
+				background-color: $orange-color
+
+// USER ROOM STEP 4-1
+.user-room
+	.step-4-1
+		.choose-service
+			.item
+				border-bottom: 3px solid rgba(0,0,0,.3)
+				padding-bottom: 20px
+				margin-bottom: 75px
+				.item-header
+					margin-bottom: 27px
+					.title-wrap, .logo-wrap
+						display: inline-block
+					.title-wrap
+						.title
+							font-family: "ProximaBold", $helvetica
+							font-size: em(26px)
+							color: $orange-color
+							transition: all .2s $animate
+							&.selected
+								transition: all .2s $animate
+								color: $green-color
+					.logo-wrap
+						position: relative
+						top: 15px
+						margin-right: 10px
+						.logo
+							width: 51px
+							height: 48px
+							background-image: url("../img/admin/icons/sprite-big-orange.png")
+							background-repeat: no-repeat
+							background-position: 0px 0px
+							transition: all .2s $animate
+							&.logo-selected
+								transition: all .2s $animate
+								background-image: url("../img/admin/icons/sprite-big-green.png")
+					.warning-wrap
+						float: right
+						position: relative
+						top: 25px
+						.text
+							display: inline-block
+							font-family: "ProximaBold", $helvetica
+							color: $green-color
+							font-size: em(15px)
+						.icon
+							display: inline-block
+							margin-right: 5px
+				.item-body
+					.text-wrap
+						padding: 0
+						padding-right: 30px
+						margin-bottom: 30px
+						.text
+							font-family: "ProximaNova", $helvetica
+							font-size: em(15px)
+							color: $text-color
+							text-align: left
+				.item-footer
+					.price-form
+						display: inline-block
+						label
+							position: relative
+							padding-left: 35px
+							cursor: pointer
+							&::before, &::after
+								content: ''
+								position: absolute
+								left: 0
+								top: 0
+								border-radius: 50%
+							&::before
+								width: 20px
+								height: 20px
+								border: 1px solid #000
+							&::after
+								opacity: 0
+								width: 10px
+								height: 10px
+								background-color: $green-color
+								top: 5px
+								left: 5px
+								transition: all .3s $animate
+						input[type="radio"]:checked + label::after
+							opacity: 1
+							transition: all .3s $animate
+					.price-wrap, .btn-wrap
+						display: inline-block
+					.price-wrap, label
+						margin-right: 95px
+						.price, .price-option
+							font-family: "ProximaBold", $helvetica
+							color: $green-color
+							line-height: 1
+						.price
+							font-size: em(26px)
+							span
+								font-size: em(12.311px)
+						.price-option
+							font-size: em(16px)
+						.price-desc
+							font-family: "ProximaNova", $helvetica
+							font-size: em(15px)
+							color: $text-color
+					.btn-wrap
+						float: right
+						.btn-standart
+							text-transform: none
+							padding: 0px 30px
+							line-height: 42px
+							background-color: $orange-color
+							transition: all .2s $animate
+							position: relative
+							&::before
+								opacity: 0
+								content: ''
+								position: absolute
+								width: 14px
+								height: 9px
+								border: 3px solid #fff
+								border-top: none
+								border-right: none
+								left: 20px
+								top: 50%
+								transition: all .2s $animate
+								transform: translateY(-80%) rotate(-45deg)
+							&.btn-standart-selected
+								transition: all .2s $animate
+								background-color: $green-color
+								padding-left: 45px
+								&::before
+									transition: all .22s $animate
+									opacity: 1
+							&.btn-disabled
+								background-color: #79cd79
+								padding-left: 45px
+								&::before
+									opacity: 1
+					
+
+// USER ROOM STEP 4-2
+.user-room
+	.step-4-2
+		.selected-services
+			.selected-header
+				position: relative
+				.link-wrap, .title-wrap
+					display: inline-block
+					.link, .title
+						font-family: "ProximaBold", $helvetica
+						font-size: em(28px)
+						color: $burgundy-color
+				.link-wrap
+					.link
+						display: block
+						position: relative
+						margin-left: 20px
+						&::before
+							content: ''
+							position: absolute
+							left: -20px
+							top: 50%
+							width: 15px
+							height: 15px
+							border: 3px solid $burgundy-color
+							border-top-color: transparent
+							border-right-color: transparent
+							transform: translateY(-50%) rotate(45deg)
+				.title-wrap
+					position: absolute
+					left: 50%
+					transform: translateX(-50%)
+			.selected-body, .selected-total
+				margin-top: 50px
+				border-bottom: 3px solid rgba(0,0,0,.3)
+				table
+					tr
+						padding: 25px 0px
+						td
+							padding: 0
+						.selected-service-title
+							width: 300px
+							.text-wrap, .icon-wrap
+								display: inline-block
+							.icon-wrap
+								position: relative
+								top: 15px
+								margin-right: 15px
+								.icon
+									width: 51px
+									height: 47px
+									background-image: url(../img/admin/icons/sprite-big-green.png)
+									background-repeat: no-repeat
+									background-position: 0 0
+							.text-wrap
+								width: auto
+								text-align: left
+								.text
+									font-family: "ProximaBold", $helvetica
+									font-size: em(26px)
+									color: $green-color
+						.selected-service-price
+							width: 313px
+							.price-wrap
+								.price, .price-option
+									font-family: "ProximaBold", $helvetica
+									color: $burgundy-color
+									font-size: em(26px)
+									line-height: 1
+								.price-option
+									font-size: em(16px)
+						.selected-service-check-mark
+							width: 125px
+							text-align: right
+							.check-mark-wrap
+								display: inline-block
+								.check-mark
+									position: relative
+									width: 33px
+									height: 33px
+									border-radius: 50%
+									background-color: $green-color
+									&::before
+										content: ''
+										position: absolute
+										top: 50%
+										left: 50%
+										transform: translate(-50%,-80%) rotate(-45deg)
+										width: 15px
+										height: 10px
+										border: 3px solid #fff
+										border-top: none
+										border-right: none
+			.selected-total
+				margin-top: 0px
+				padding: 25px 0px
+				.total
+					padding-left: 65px
+					width: 279px !important
+					.text
+						font-family: "ProximaBold", $helvetica
+						font-size: em(26px)
+						color: $burgundy-color
+						width: auto
+						position: relative
+						top: -7px
+			.selected-footer
+				padding-top: 40px
+				padding-bottom: 30px
+				border-bottom: 3px solid rgba(0,0,0,.3)
+				.title-wrap
+					text-align: center
+					margin-bottom: 75px
+					.title
+						font-family: "ProximaBold", $helvetica
+						font-size: em(28px)
+						line-height: 1
+						color: $burgundy-color
+				.payment-choose
+					.form-group
+						display: flex
+						justify-content: space-around
+						.form-item
+							label
+								font-family: "ProximaBold", $helvetica
+								font-size: em(20px)
+								color: $text-color
+								position: relative
+								line-height: 1.2
+								margin-left: 40px
+								transition: all .2s $animate
+								cursor: pointer
+								&::before, &::after
+									content: ''
+									position: absolute
+								&::before
+									left: -40px
+									top: 0
+									width: 22px
+									height: 22px
+									border-radius: 50%
+									border: 1px solid $burgundy-color
+								&::after
+									opacity: 0
+									left: -35px
+									top: 5px
+									width: 12px
+									height: 12px
+									background-color: $green-color
+									border-radius: 50%
+									transition: all .2s $animate
+							input:checked + label
+								transition: all .2s $animate
+								color: $green-color
+								&::after
+									opacity: 1
+									transition: all .2s $animate
+			.btn-next
+				float: right
+				margin-top: 40px
+				.btn-standart
+					background-color: $orange-color
+					padding: 0px 60px
+					line-height: 50px
+
+//////////////////////////////
+/////////////////////////////
+//
+// Looking Apartment
+//
+////////////////////////////
+
+// Main Form
+.looking-apartment
+	.content
+		.form-step
+			border-bottom: 3px solid rgba(0, 0, 0, 0.2)
+			margin-bottom: 50px
+			.form-part
+				.form-group
+					.form-checkbox-wrap
+						.form-checkbox
+							&:nth-of-type(odd)
+								width: 45%
+							&:nth-of-type(even)
+								width: 45%
+					&.rent-price, &.size
+						.std-input
+							padding: 0px 10px
+							width: 107px
+							margin-right: 10px
+					&.min-numbers-of-beds, &.furnished, &.term-of-lease
+						select
+							width: 44%
+					&.min-numbers-of-beds
+						.title
+							line-height: 1
+					&.term-of-lease
+						.title
+							width: 50%
+					&.required-from
+						.title
+							width: 50%
+						.bootstrap-calendar
+							width: 44%
+							background-color: #fff
+							padding: 0px 10px
+							cursor: pointer
+							background-image: url("../img/sprite/sprite-green.png")
+							background-repeat: no-repeat
+							background-position: 95% -103px
+					&.type-of-flat, &.amenities, &.near-to-metro
+						.form-checkbox-wrap
+							width: 50%
+							padding-left: 0
+						.title
+							width: 50%
+					&.type-of-flat
+						.form-checkbox-wrap
+							.form-checkbox
+								&:first-of-type
+									width: 35%
+								&:last-of-type
+									width: 55%
+					&.near-to-metro
+						.form-checkbox-wrap
+							.form-checkbox:nth-of-type(even)
+								padding-left: 20px
+					&.amenities
+						.form-checkbox-wrap
+							.form-checkbox
+								display: block
+								width: auto
+					// Table
+					&.select-district
+						.select-wrap
+							width: 50%
+							margin-bottom: 45px
+							select
+								width: 100%
+						.table-wrap, .map-wrap
+							float: left
+						.table-wrap
+							width: 49%
+							.title
+								color: $green-color
+								padding-left: 15px
+								margin-bottom: 40px
+							table
+								tr
+									td
+										width: 65px
+										text-align: center
+										input[type="checkbox"]:checked + label
+											color: $orange-color
+										label
+											display: block
+											width: 100%
+											font-family: "ProximaBold", $helvetica
+											font-size: em(22px)
+											color: $burgundy-color
+											cursor: pointer
+											user-select: none
+						.map-wrap
+							width: 49%
+							svg
+								width: 100%
+		.btn-wrap
+			display: block
+			float: none
+			text-align: center
+			.btn-standart
+				display: inline-block
+				width: auto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "media"

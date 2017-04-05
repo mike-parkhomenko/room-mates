@@ -1,0 +1,342 @@
+@import "bourbon"
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1199px)
+
+	//Main Screen
+	.main-screen
+		.header-search
+			width: 960px
+			.search-wrap
+				.search-parametr
+					.title-wrap
+						.title
+							font-size: em(22px)
+					.user-choice
+						.flat-date
+							font-size: em(20px)
+							max-width: 110px
+						.user-looking
+							width: 360px
+						.choice-title
+							font-size: em(22px)
+						.select-wrap
+							.select
+								font-size: em(16px)
+
+	//Section Roommates
+	.section-roommates
+		.chat-card
+			left: 630px
+			top: -200px
+		.desc-wrap-mobile
+			display: none
+	
+	
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px)
+	
+	//Header
+	header
+		.top-line
+			.burger-wrap
+				top: 30px
+				&.fixed
+					top: 20px
+
+	// Main Screen
+	.header-search
+		display: none
+	
+	//Section Apartments
+	.section-apartments, .section-rooms
+		.title-wrap
+			p
+				font-size: em(20px)
+		.info-wrap
+			li
+				padding-left: 20px
+				p
+					font-size: em(14px)
+	
+	//Section Meet
+	.section-meet
+		.col-md-3
+			margin-bottom: 60px
+		.item
+			.info-wrap
+				text-align: center
+				li
+					padding-left: 0
+
+	//Section Roommates
+	.section-roommates
+		.apartment-card
+			margin-left: 0
+		.chat-card
+			left: 400px
+
+	//Sectoin Join
+	.section-join
+		.item
+			margin-bottom: 30px
+			.icon-wrap
+				margin-bottom: 20px
+			.text-wrap
+				.text
+					text-align: justify
+
+	//Section Info
+	.section-info
+		padding-bottom: 30px
+		.item
+			margin-bottom: 100px
+		.item-2
+			.text-wrap
+				.text
+					padding-left: 0px
+
+	//Footer
+	footer
+		.list-4
+			.social-wrap
+				.social-item:first-child, .social-item:nth-child(2)
+					.social-link
+						margin-bottom: 10px
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px)
+	
+	//Header
+	header
+		.top-line
+			background-color: rgba(85,65,62,.80)
+	
+	//Section Post
+	.section-post
+		padding-top: 40px
+		padding-bottom: 100px
+		opacity: 1 !important
+		.text-wrap
+			h2
+				font-size: em(20px)
+			p
+				font-size: em(16px)
+		.btn-wrap
+			.btn-standart
+				font-size: em(18px)
+				padding: 0px 25px
+				line-height: 50px
+	
+	//Section Apartments
+	.section-apartments, .section-rooms
+		padding-bottom: 60px
+		h3
+			font-size: em(30px)
+			margin-bottom: 40px
+		.title-wrap
+			margin: 5px 0px
+		.img-wrap
+			img
+				width: 70%
+		.info-wrap
+			margin-bottom: 50px
+			ul
+				text-align: center
+			li
+				display: inline-block
+				padding: 0px 4px
+				.icon-wrap
+					margin-right: 0
+				&:first-child
+					p
+						text-align: left
+		.btn-wrap
+			margin-top: 20px
+			.btn-ghost
+				font-size: em(20px)
+				padding: 0px 30px
+				line-height: 40px
+
+	//Section Meet
+	.section-meet
+		padding-top: 40px
+		padding-bottom: 0
+		h3
+			font-size: em(30px)
+			margin-bottom: 10px
+		.col-md-3
+			margin-bottom: 0
+		.item
+			padding-top: 20px
+			padding-bottom: 30px
+			border-bottom: 1px solid rgba(0,0,0,.2)
+
+	//Section Roommates
+	.section-roommates
+		.chat-card
+			display: none
+			opacity: 1 !important
+		.apartment-card
+			left: 50%
+			transform: translateX(-50%) !important
+			opacity: 1 !important
+			.img-wrap
+				img
+					width: 300px
+			.info-wrap
+				.star-wrap
+					bottom: -90px
+			.desc-wrap
+				display: none
+		.btn-wrap
+			top: 0
+		.desc-wrap-mobile
+			display: block
+
+	//Section Banner
+	.section-banner
+		display: none
+
+	//Footer
+	footer
+		.list
+			margin-bottom: 20px
+	
+	/*Disable Animation on Mobile Devices*/
+	.animated
+		/*CSS transitions*/
+		-o-transition-property: none !important
+		-moz-transition-property: none !important
+		-ms-transition-property: none !important
+		-webkit-transition-property: none !important
+		transition-property: none !important
+		/*CSS transforms*/
+		-o-transform: none !important
+		-moz-transform: none !important
+		-ms-transform: none !important
+		-webkit-transform: none !important
+		transform: none !important
+		/*CSS animations*/
+		-webkit-animation: none !important
+		-moz-animation: none !important
+		-o-animation: none !important
+		-ms-animation: none !important
+		animation: none !important
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	
+	//Header
+	header
+		.top-line
+			line-height: 60px
+			height: 60px
+			.burger-wrap
+				top: 20px
+		.vert-mnu
+			width: 100%
+			right: -110%
+		.header-bg-images
+			.bg-img
+				.text-wrap
+					.text
+						font-size: em(18px)
+	
+	//Section Post
+	.section-post
+		.text-wrap
+			p
+				font-size: em(12px)
+				line-height: 18px
+	
+	//Section Apartments
+	.section-apartments, .section-rooms
+		.img-wrap
+			img
+				width: 100%
+		.title-wrap
+			p
+				margin-bottom: 20px
+		.info-wrap
+			li
+				display: block
+				text-align: left
+				padding-left: 10px
+
+	//Section Roommates
+	.section-roommates
+		padding: 30px 10px
+		h3
+			font-size: em(30px)
+		.apartment-card
+			.img-wrap
+				img
+					width: 100%
+			.info-wrap
+				.mark-wrap, .distance-wrap
+					display: inline-block
+			.star-wrap
+				display: none
+		.desc-wrap-mobile
+			margin-top: 30px
+			p
+				font-size: em(16px)
+	
+	//Section Info
+	.section-info
+		padding-bottom: 0
+		.item
+			.img-wrap
+				width: 100%
+				img
+					width: 100%
+	
+	//Footer
+	footer
+		padding-bottom: 50px
+		.list-4
+			.social-wrap
+				.social-item
+					.social-link
+					
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+

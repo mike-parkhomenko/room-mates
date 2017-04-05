@@ -1,0 +1,169 @@
+@import "bourbon"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	overflow-x: hidden
+	&.do-not-scroll
+		width: 100%
+		overflow: hidden
+
+h1, h2, h3, h4, h5
+	line-height: 1
+	margin: 0
+
+ul
+	margin: 0
+	padding: 0
+	li
+		list-style-type: none
+		display: inline-block
+
+a, a:hover, a:active, a:focus
+	text-decoration: none
+	color: #fff
+
+p
+	margin: 0
+
+input
+	display: none
+	outline: none
+
+input[type="radio"]
+	display: none
+
+input[type="number"], input[type="submit"]
+	border: none
+	outline: none
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button
+	-webkit-appearance: none
+	margin: 0
+
+button, select
+	border: none
+	outline: none
+	cursor: pointer
+
+select
+	option
+		cursor: pointer
+
+.btn-standart
+	background-color: $green-color
+	color: #fff
+	text-transform: uppercase
+	font-family: "ProximaBold", $helvetica
+	font-size: em(20px)
+	transition: all .3s
+	&:hover
+		transition: all .3s
+		background-color: $gark-green-color
+
+.btn-ghost
+	background-color: transparent
+	border: 1px solid $burgundy-color
+	color: $burgundy-color
+	font-family: "ProximaBold", $helvetica
+	font-size: em(22px)
+	transition: all .3s
+	&:hover
+		transition: all .3s
+		background-color: $burgundy-color
+		color: #fff
+
+//Bootstrap Form Validation
+.form-control
+	border-radius: 0
+	height: auto
+	border: none
+	&:focus
+		box-shadow: none
+
+.select-search
+	font-family: "ProximaBold", $helvetica
+	color: $burgundy-color
+	border: 1px solid $burgundy-color
+	appearance: none
+	line-height: 1
+	background-image: url("../img/sprite/arrow-down.png")
+	background-repeat: no-repeat
+	background-position: 95% 50%
+
+.input-range
+	display: inline-block
+	max-width: 98px
+	padding: 0px 15px
+	line-height: 40px
+	vertical-align: middle
+	font-family: "ProximBold", $helvetica
+	border: 1px solid $burgundy-color !important
+
+.std-input
+	background-color: #fff
+	border: 1px solid $burgundy-color
+	font-family: "ProximaBold", $helvetica
+	color: $burgundy-color
+	&::placeholder
+		color: $burgundy-color
+	
+//Bootstrap Datepicker
+.datepicker
+	z-index: 1000 !important
+
+.datepicker table tr td.active,
+.datepicker table tr td.active.disabled,
+.datepicker table tr td.active.disabled:hover,
+.datepicker table tr td.active:hover,
+	background-image: none
+	background-color: $green-color
+
+.datepicker table tr td.active.active, .datepicker table tr td.active.disabled, .datepicker table tr td.active.disabled.active, .datepicker table tr td.active.disabled.disabled, .datepicker table tr td.active.disabled:active, .datepicker table tr td.active.disabled:hover, .datepicker table tr td.active.disabled:hover.active, .datepicker table tr td.active.disabled:hover.disabled, .datepicker table tr td.active.disabled:hover:active, .datepicker table tr td.active.disabled:hover:hover, .datepicker table tr td.active.disabled:hover[disabled], .datepicker table tr td.active.disabled[disabled], .datepicker table tr td.active:active, .datepicker table tr td.active:hover, .datepicker table tr td.active:hover.active, .datepicker table tr td.active:hover.disabled, .datepicker table tr td.active:hover:active, .datepicker table tr td.active:hover:hover, .datepicker table tr td.active:hover[disabled], .datepicker table tr td.active[disabled]
+	background-color: $green-color
+
+.datepicker table tr td span.active, .datepicker table tr td span.active.disabled, .datepicker table tr td span.active.disabled:hover, .datepicker table tr td span.active:hover
+	background-color: $green-color
+	background-image: none
+
+.datepicker table tr td span.active.active, .datepicker table tr td span.active.disabled, .datepicker table tr td span.active.disabled.active, .datepicker table tr td span.active.disabled.disabled, .datepicker table tr td span.active.disabled:active, .datepicker table tr td span.active.disabled:hover, .datepicker table tr td span.active.disabled:hover.active, .datepicker table tr td span.active.disabled:hover.disabled, .datepicker table tr td span.active.disabled:hover:active, .datepicker table tr td span.active.disabled:hover:hover, .datepicker table tr td span.active.disabled:hover[disabled], .datepicker table tr td span.active.disabled[disabled], .datepicker table tr td span.active:active, .datepicker table tr td span.active:hover, .datepicker table tr td span.active:hover.active, .datepicker table tr td span.active:hover.disabled, .datepicker table tr td span.active:hover:active, .datepicker table tr td span.active:hover:hover, .datepicker table tr td span.active:hover[disabled], .datepicker table tr td span.active[disabled]
+	background-color: $green-color
+
+
+
+
+
+
+
+
+
+
+
+
