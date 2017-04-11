@@ -77,7 +77,7 @@ select
 	option
 		cursor: pointer
 
-.btn-standart
+.btn-standard
 	background-color: $green-color
 	color: #fff
 	text-transform: uppercase
@@ -100,6 +100,20 @@ select
 		background-color: $burgundy-color
 		color: #fff
 
+.fb-btn-connect
+	color: #3b5998
+	border-color: #3b5998
+	&:hover
+		background-color: #3b5998
+
+.fb-btn-disconnect
+	background-color: #3b5998
+	color: #fff
+	&:hover
+		background-color: #fff
+		border-color: #3b5998
+		color: #3b5998 !important
+
 //Bootstrap Form Validation
 .form-control
 	border-radius: 0
@@ -111,12 +125,15 @@ select
 .select-search
 	font-family: "ProximaBold", $helvetica
 	color: $burgundy-color
-	border: 1px solid $burgundy-color
+	border: 1px solid #c0b8b7
 	appearance: none
 	line-height: 1
 	background-image: url("../img/sprite/arrow-down.png")
 	background-repeat: no-repeat
 	background-position: 95% 50%
+
+.select-item
+	color: #99817c
 
 .input-range
 	display: inline-block
@@ -125,15 +142,15 @@ select
 	line-height: 40px
 	vertical-align: middle
 	font-family: "ProximBold", $helvetica
-	border: 1px solid $burgundy-color !important
+	border: 1px solid #c0b8b7 !important
 
 .std-input
 	background-color: #fff
-	border: 1px solid $burgundy-color
+	border: 1px solid #c0b8b7
 	font-family: "ProximaBold", $helvetica
 	color: $burgundy-color
 	&::placeholder
-		color: $burgundy-color
+		color: #99817c
 	
 //Bootstrap Datepicker
 .datepicker
@@ -155,7 +172,6 @@ select
 
 .datepicker table tr td span.active.active, .datepicker table tr td span.active.disabled, .datepicker table tr td span.active.disabled.active, .datepicker table tr td span.active.disabled.disabled, .datepicker table tr td span.active.disabled:active, .datepicker table tr td span.active.disabled:hover, .datepicker table tr td span.active.disabled:hover.active, .datepicker table tr td span.active.disabled:hover.disabled, .datepicker table tr td span.active.disabled:hover:active, .datepicker table tr td span.active.disabled:hover:hover, .datepicker table tr td span.active.disabled:hover[disabled], .datepicker table tr td span.active.disabled[disabled], .datepicker table tr td span.active:active, .datepicker table tr td span.active:hover, .datepicker table tr td span.active:hover.active, .datepicker table tr td span.active:hover.disabled, .datepicker table tr td span.active:hover:active, .datepicker table tr td span.active:hover:hover, .datepicker table tr td span.active:hover[disabled], .datepicker table tr td span.active[disabled]
 	background-color: $green-color
-
 
 
 

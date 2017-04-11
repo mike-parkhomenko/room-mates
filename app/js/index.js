@@ -2,7 +2,7 @@ $(function() {
 
 	// Custom JS
 	
-	//Open | Close Search Parametrs
+	//Open | Close Search parameters
 	$(".select").on("click", function() {
 		$(".user-looking").html("<i class='arrow-down'></i>" + $(this).text());
 		$(".select-wrap").css("display", "none");
@@ -26,7 +26,7 @@ $(function() {
 //
 //	var date = new Date();
 //	console.log(date.yyyymmdd());
-	
+
 	//Bootstrap Datepicker
 	$(".input-number").datepicker({startView: 3});
 	

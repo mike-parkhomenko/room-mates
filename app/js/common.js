@@ -36,4 +36,9 @@ $(function() {
 	//Preloader
 	$('.preloader').fadeOut(500);
 	
+	// Select Placeholder
+	$('.select-item').change(function() {
+		$(this).toggleClass('select-item', !$(this).val());
+	});
+	
 });

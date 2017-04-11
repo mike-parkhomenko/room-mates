@@ -25,8 +25,8 @@
 		<!-- Animate-Css -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 		
-		<!-- Flatpickr (Calendar) -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/2.3.7/flatpickr.min.css">
+		<!-- Bootstrap Datepicker -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.min.css">
 		
 		<!-- Owl Carousel -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.min.css">
@@ -179,7 +179,7 @@
 
 							<div class="btn-wrap">
 
-								<a href="#" class="btn-ghost">Connect via Facebook</a>
+								<a href="#" class="btn-ghost fb-btn-connect">Connect via Facebook</a>
 
 							</div>
 
@@ -235,9 +235,9 @@
 
 						</div>
 
-						<div class="text-wrap">
+						<div class="text-wrap section-title">
 
-							<p class="text">Create your ad - I have an apartment to let</p>
+							<p class="text">Create your ad - I am looking for a room</p>
 
 						</div>
 						
@@ -337,15 +337,206 @@
 						
 							<div class="form-part form-part-1">
 							
-								
+								<div class="form-group my-budget">
+
+									<span class="title">My budget is up to:<i>*</i></span>
+									
+									<input type="text" class="std-input from-control" required>
+
+									<select name="select-rent" class="std-input">
+
+										<option value="1">EUR</option>
+										<option value="2">USD</option>
+										<option value="3">Test</option>
+
+									</select>
+
+								</div>
 							
+							</div>
+							
+							<div class="form-part form-part-2">
+							
+								<div class="form-group required-from">
+
+									<span class="title">Required from</span>
+
+									<input type="text" class="input-number form-control std-input bootstrap-calendar" placeholder="Today" name="day" readonly>
+
+								</div>
+								
+								<div class="form-group term-of-lease clearfix">
+								
+									<span class="title">Term of lease <i>*</i></span>
+									
+									<ul class="form-checkbox-wrap">
+										
+										<li class="form-checkbox">
+											<input type="checkbox" id="12-months" name="term-of-lease" class="form-control" required>
+											<label for="12-months">12+ months</label>
+										</li>
+
+										<li class="form-checkbox">
+											<input type="checkbox" id="6-months" name="term-of-lease" class="form-control" required>
+											<label for="6-months">6+ months</label>
+										</li>
+
+										<li class="form-checkbox">
+											<input type="checkbox" id="academic-semester" name="term-of-lease" class="form-control" required>
+											<label for="academic-semester">Academic semester</label>
+										</li>
+
+										<li class="form-checkbox">
+											<input type="checkbox" id="daily-weekly" name="term-of-lease" class="form-control" required>
+											<label for="daily-weekly">Daily/weekly</label>
+										</li>
+										
+									</ul>
+
+								</div>
+
+							</div>
+							
+							<div class="form-part form-part-3">
+								
+								<div class="form-group minimum-floor">
+
+									<span class="title">Minimum floor</span>
+
+									<select name="minimum-floor" class="std-input form-control select-item">
+
+										<option value="1">Select please</option>
+										<option value="2">Test</option>
+										<option value="3">Test</option>
+
+									</select>
+									
+								</div>
+								
+								<div class="form-group apartment-condition clearfix">
+								
+									<span class="title">Apartment condition</span>
+									
+									<ul class="form-checkbox-wrap">
+										
+										<li class="form-checkbox">
+											<input type="checkbox" id="new-built" name="apartment-condition" class="form-control">
+											<label for="new-built">New built</label>
+										</li>
+
+										<li class="form-checkbox">
+											<input type="checkbox" id="recently-built" name="apartment-condition" class="form-control">
+											<label for="recently-built">Recently built</label>
+										</li>
+
+										<li class="form-checkbox">
+											<input type="checkbox" id="newly-renoveted" name="apartment-condition" class="form-control">
+											<label for="newly-renoveted">Good (newly renoveted classical apartment)</label>
+										</li>
+
+										<li class="form-checkbox">
+											<input type="checkbox" id="renovated-classical" name="apartment-condition" class="form-control">
+											<label for="renovated-classical">Standard (renovated classical apartment)</label>
+										</li>
+										
+									</ul>
+
+								</div>
+								
+								<div class="form-group near-to-metro clearfix">
+								
+									<span class="title">Near to metro/tram<i>*</i></span>
+									
+									<ul class="form-checkbox-wrap">
+										
+										<li class="form-checkbox">
+											<input type="checkbox" id="yellow-metro" name="near-to-metro-tram" class="form-control" required>
+											<label for="yellow-metro">(M1) Yellow metro</label>
+										</li>
+
+										<li class="form-checkbox">
+											<input type="checkbox" id="red-metro" name="near-to-metro-tram" class="form-control" required>
+											<label for="red-metro">(M2) Red metro</label>
+										</li>
+
+										<li class="form-checkbox">
+											<input type="checkbox" id="blue-metro" name="near-to-metro-tram" class="form-control" required>
+											<label for="blue-metro">(M3) Blue metro</label>
+										</li>
+
+										<li class="form-checkbox">
+											<input type="checkbox" id="tram-4-6" name="near-to-metro-tram" class="form-control" required>
+											<label for="tram-4-6">Tram 4/6</label>
+										</li>
+										
+										<li class="form-checkbox">
+											<input type="checkbox" id="tram-47-49" name="near-to-metro-tram" class="form-control" required>
+											<label for="tram-47-49">Tram 47/49</label>
+										</li>
+										
+										<li class="form-checkbox">
+											<input type="checkbox" id="bus" name="near-to-metro-tram" class="form-control" required>
+											<label for="bus">Bus</label>
+										</li>
+										
+									</ul>
+
+								</div>
+
+								<div class="form-group enviroment-surr clearfix">
+								
+									<span class="title">Environment / Surroundings</span>
+									
+									<ul class="form-checkbox-wrap">
+										
+										<li class="form-checkbox">
+											<input type="checkbox" id="near-the-river" name="environment-surroundings" class="form-control">
+											<label for="near-the-river">Near the river</label>
+										</li>
+
+										<li class="form-checkbox">
+											<input type="checkbox" id="green-areas" name="environment-surroundings" class="form-control">
+											<label for="green-areas">Green areas</label>
+										</li>
+
+										
+
+										<li class="form-checkbox">
+											<input type="checkbox" id="grocery-store" name="environment-surroundings" class="form-control">
+											<label for="grocery-store">Grocery store</label>
+										</li>
+										
+										<li class="form-checkbox">
+											<input type="checkbox" id="fitness-center" name="environment-surroundings" class="form-control">
+											<label for="fitness-center">Fitness center</label>
+										</li>
+										
+										<li class="form-checkbox">
+											<input type="checkbox" id="student-libraries" name="environment-surroundings" class="form-control">
+											<label for="student-libraries">Student libraries</label>
+										</li>
+										
+										<li class="form-checkbox">
+											<input type="checkbox" id="swimming-pool" name="environment-surroundings" class="form-control">
+											<label for="swimming-pool">Swimming pool</label>
+										</li>
+										
+										<li class="form-checkbox">
+											<input type="checkbox" id="pastime-location" name="environment-surroundings" class="form-control">
+											<label for="pastime-location">Pastime locations<br>(restraunts, coffee shops,clubs, etc)</label>
+										</li>
+										
+									</ul>
+
+								</div>
+								
 							</div>
 							
 						</form>
 						
 						<div class="btn-wrap">
 								
-							<button class="btn-standart" type="submit">Next</button>
+							<button class="btn-standard" type="submit">Next</button>
 
 						</div>
 
@@ -429,6 +620,7 @@
 
 	<!-- Connect JS Start -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" text="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js" text="text/javascript"></script>
 	<script src="js/common.js" text="text/javascript"></script>
 	<script src="js/user-room.js" text="text/javascript"></script>
 

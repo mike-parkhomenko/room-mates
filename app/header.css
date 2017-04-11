@@ -66,7 +66,7 @@ button {
   border: none;
   outline: none; }
 
-.btn-standart {
+.btn-standard {
   background-color: #00bf00;
   color: #fff;
   text-transform: uppercase;
@@ -74,7 +74,7 @@ button {
   font-size: 1.25em;
   -webkit-transition: all .3s;
   transition: all .3s; }
-  .btn-standart:hover {
+  .btn-standard:hover {
     -webkit-transition: all .3s;
     transition: all .3s;
     background-color: #00A300; }

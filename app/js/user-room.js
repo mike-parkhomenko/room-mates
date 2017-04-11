@@ -7,7 +7,7 @@ $(function() {
 	
 	// Button Slected
 	$(".item-footer .btn-wrap").on('click', function() {
-		$(this).children().toggleClass('btn-standart-selected');
+		$(this).children().toggleClass('btn-standard-selected');
 		$(this).parent('.item-footer').prev().prev().children().children().toggleClass('selected');
 		$(this).parent().prev().prev().children('.logo-wrap').children().toggleClass('logo-selected');
 	});
