@@ -1867,7 +1867,48 @@ footer
 							padding: 0px 20px
 							line-height: 43px
 
-
+///////////////
+///////////////
+///////////////
+//Select District Popup
+///////////////
+///////////////
+.login-registration-section
+	.select-district-popup
+		.title-wrap
+			text-align: center
+			margin-bottom: 45px
+			.title
+				font-family: "ProximaBold", $helvetica
+				font-size: em(36px)
+				color: $green-color
+				text-transform: uppercase
+				line-height: 1
+		.text-wrap
+			text-align: center
+			.text
+				font-family: "ProximaBold", $helvetica
+				font-size: em(20px)
+				color: $burgundy-color
+		.form-step
+			.select-district
+				text-align: center
+				table
+					display: inline-block
+					tr
+						td
+							width: 65px
+							text-align: center
+							input[type="checkbox"]:checked + label
+								color: $orange-color
+							label
+								display: block
+								width: 100%
+								font-family: "ProximaBold", $helvetica
+								font-size: em(22px)
+								color: $burgundy-color
+								cursor: pointer
+								user-select: none
 
 /////////////////////////////////////////////////////////
 /////////////// User Room //////////////////////////////////
@@ -2135,6 +2176,9 @@ footer
 				margin-bottom: 20px
 				&:nth-of-type(even)
 					margin-right: 0
+				&.has-error
+					select
+						background-image: url(../img/sprite/arrow-down-orange.png)
 				select, .std-input
 					font-size: em(20px)
 					padding: 0px 17px
@@ -2188,6 +2232,10 @@ footer
 					color: $green-color
 					margin-bottom: 35px
 				.form-group
+					&.has-error
+						padding: 5px 0px
+						select
+							background-image: url(../img/sprite/arrow-down-orange.png)
 					.textarea-item
 						line-height: 1.2 !important
 						padding: 10px !important
@@ -2203,6 +2251,7 @@ footer
 					span
 						width: auto
 					.title
+						padding-left: 5px
 						i
 							color: $orange-color
 					.std-input, select
@@ -3034,10 +3083,6 @@ footer
 								display: inline-flex
 								line-height: 1.2
 								margin-bottom: 20px
-								&:nth-of-type(even)
-									width: 50%
-								&:nth-of-type(odd)
-									width: 40%
 								label::before
 									top: 4px
 					&.language-i-speak, &.language-flatmate-speak, &.language-roommate-speak
@@ -3056,6 +3101,12 @@ footer
 						.std-input
 							border: 1px solid $burgundy-color
 							padding: 0px 10px
+					.form-checkbox-wrap
+						.form-checkbox
+							&:nth-of-type(even)
+								width: 50%
+							&:nth-of-type(odd)
+								width: 40%
 
 // Looking Room Step-4
 .looking-room, .room-to-let
@@ -3065,6 +3116,12 @@ footer
 				text-align: center
 				.btn-wrap
 					display: inline-block
+	.content
+		.form-step-2
+			.form-part
+				.form-group
+					&.has-error
+						padding: 0
 
 // Looking Room Step-5
 .looking-room, .room-to-let

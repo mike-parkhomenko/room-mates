@@ -122,6 +122,34 @@ select
 	&:focus
 		box-shadow: none
 
+.form-group
+	&.has-success
+		.form-control
+			border-color: #6f504a
+			&:focus
+				box-shadow: none
+	&.remove-help-block
+		.help-block
+			display: none
+
+.form-group
+	&.has-error
+		background-color: #faa67b
+		&.remove-help-block
+			padding: 0
+		.help-block
+			color: #fff
+			line-height: 1.2
+			margin-bottom: 5px
+		textarea, input, select
+			color: #f77c3d !important
+		.form-control
+			border-color: #f77c3d
+			&:focus
+				box-shadow: none
+		&.form-group__single-input
+			padding: 0
+
 .select-search
 	font-family: "ProximaBold", $helvetica
 	color: $burgundy-color
