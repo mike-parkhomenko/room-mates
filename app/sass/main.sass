@@ -1914,7 +1914,7 @@ footer
 /////////////// User Room //////////////////////////////////
 
 // Header Section
-.user-room, .looking-apartment, .looking-room, .room-to-let
+.user-room, .looking-apartment, .looking-room, .room-to-let, .one-apartment-page
 	width: 100%
 	.section-header
 		width: 100%
@@ -1929,12 +1929,12 @@ footer
 				width: 100%
 				height: 100%
 
-.user-room, .looking-apartment, .looking-room, .room-to-let
+.user-room, .looking-apartment, .looking-room, .room-to-let, .one-apartment-page
 	.section-room
 		padding-bottom: 60px
 
 // Aside User Room
-.user-room, .looking-apartment, .looking-room, .room-to-let
+.user-room, .looking-apartment, .looking-room, .room-to-let, .one-apartment-page
 	.profile
 		background-color: #fff
 		position: relative
@@ -3206,6 +3206,112 @@ footer
 				line-height: 1
 				margin: 0
 
+//////////////////////////////
+/////////////////////////////
+//
+// One Apartment Page
+//
+////////////////////////////
+
+// Bread Crumbs
+.one-apartment-page
+	.bread-crumbs
+		position: relative
+		top: -20px
+		padding-bottom: 25px
+		border-bottom: 1px solid rgba(0,0,0,0.3)
+		.bread-crumbs-wrap
+			display: inline-block
+			.bread-crumbs-item
+				padding: 0px 15px
+				position: relative
+				line-height: 1
+				&::before
+					content: ''
+					position: absolute
+					top: 0
+					right: -4px
+					width: 1px
+					height: 100%
+					background-color: $burgundy-color
+				&:last-of-type
+					&::before
+						display: none
+				.bread-crumbs-link
+					display: block
+					width: 100%
+					font-family: "ProximaBold", $helvetica
+					font-size: em(18px)
+					color: $burgundy-color
+					transition: all .3s $animate
+					&:hover
+						transition: all .3s $animate
+						color: $green-color
+		.icons-wrap
+			float: right
+			.icon-item
+				padding: 0px 5px
+				.icon-link
+					display: block
+					width: 27px
+					height: 28px
+
+.one-apartment-page
+	.slider
+		.title
+			font-family: "ProximaBold", $helvetica
+			font-size: em(26px)
+			color: $green-color
+			line-height: 1
+			margin-bottom: 25px
+		.slider-wrap
+			display: inline-block
+			width: 65%
+			position: relative
+			img
+				width: 100%
+		.owl-carousel
+			.owl-nav
+				position: absolute
+				height: 100%
+				top: 0
+				width: 100%
+				.owl-prev, .owl-next
+					position: absolute
+					top: 50%
+					left: -23px
+					display: inline-block
+					width: 57px
+					height: 57px
+					border-radius: 50%
+					background-color: #fff
+					box-shadow: 2px 3px 5px 0px rgba(0,0,0,.4)
+					background-image: url('../img/one-apartment-page/arrow-slider.png')
+					background-repeat: no-repeat
+					background-position: 45% 50%
+					transform: translateY(-50%)
+				.owl-next
+					transform: translateY(-50%) rotate(180deg)
+					right: -23px
+					left: auto
+					box-shadow: -2px -3px 5px 0px rgba(0,0,0,.4)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3224,3 +3330,21 @@ footer
 
 
 @import "media"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
