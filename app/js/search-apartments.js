@@ -29,10 +29,30 @@ $(function (){
 		touchDrag: false
 	});
 	
-	//Magnific Popup
+	// Magnific Popup
 	$(".enlarge-map").magnificPopup({
 		type: 'iframe',
 		fixedContentPos: false
+	});
+	
+	// Open | Close Select District
+	$(".login-registration-wrap").on("click", function(e) {
+		e.stopPropagation();
+	});
+	
+	$(".select-district .info").on('click', function() {
+		$(".login-registration-section").addClass('active');
+		$("body").addClass("do-not-scroll");
+	});
+	
+	$(".login-registration-section .btn-close").on("click", function() {
+		$(".login-registration-section").removeClass('active');
+		$("body").removeClass("do-not-scroll");
+	});
+	
+	$(".login-registration-section").on("click", function() {
+		$(".login-registration-section").removeClass('active');
+		$("body").removeClass("do-not-scroll");
 	});
 
 });
